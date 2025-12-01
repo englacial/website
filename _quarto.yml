@@ -4,8 +4,8 @@ project:
 
 website:
   description: "Open Science Infrastructure for Earth's Ice Sheets"
-  site-url: https://englacial.org
-  repo-url: https://github.com/englacial/website
+  site-url: "https://englacial.org"
+  repo-url: "https://github.com/englacial/website"
   title: "englacial"
   navbar:
     right:
