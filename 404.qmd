@@ -1,0 +1,16 @@
+---
+title: "Page Not Found"
+---
+
+## 404 - Page Not Found
+
+Sorry, the page you're looking for doesn't exist.
+
+**Suggestions:**
+- Check the URL for typos
+- [Return to homepage](/)
+- [View our GitHub repository](https://github.com/englacial)
+
+---
+
+If you think this is a mistake, please [open an issue](https://github.com/englacial/website/issues).
