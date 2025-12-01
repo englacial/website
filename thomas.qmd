@@ -20,9 +20,11 @@ about:
 ## Education
 
 **Stanford University, Palo Alto**
+
 PhD in Electrical Engineering
 
 ## Experience
 
 Astera Institute | Resident
+
 Zipline International | Technical Program Manager
