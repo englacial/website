@@ -9,12 +9,25 @@ website:
   title: "englacial"
   navbar:
     right:
-      #- text: "About"
+      - text: "team"
+        menu:
+        - text: Thomas Teisberg
+          href: thomas.qmd
+        - text: Shane Grigsby
+          href: shane.qmd
+      - text: "projects"
+        menu:
+        - text: xopr
+          href: https://github.com/englacial/xopr
+        - text: Living Data Products
+          href: https://astera.org/call-for-proposals-living-data-products-for-ice-sheet-models/
       #  href: about.qmd
-      - text: "Blog"
+      - text: "blog"
         href: blog.qmd
       - icon: github
         href: https://github.com/englacial
+      #- icon: rss
+      #  href: blog.xml
       #- icon: twitter
       #  href: https://twitter.com
 format:
@@ -28,8 +41,8 @@ format:
             plausible.init()
           </script>
     theme:
-      - lux
-      - brand
+      - flatly #lux
+      #- brand
     css: styles.css
     toc: true
 

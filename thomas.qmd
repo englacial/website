@@ -1,0 +1,28 @@
+---
+title: "Thomas Teisberg"
+image: thomas.png
+toc: false
+about:
+  template: solana
+  links:
+   # - icon: twitter
+   #   text: Twitter
+   #   href: https://twitter.com
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/thomasteisberg
+    - icon: github
+      text: Github
+      href: https://github.com/thomasteisberg
+
+---
+
+## Education
+
+**Stanford University, Palo Alto**
+PhD in Electrical Engineering
+
+## Experience
+
+Astera Institute | Resident
+Zipline International | Technical Program Manager
