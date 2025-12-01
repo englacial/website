@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  description: "Open Science Infrastructure for Earth's Ice Sheets"
+  site-url: https://englacial.org
+  repo-url: https://github.com/englacial/website
+  title: "englacial"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/englacial
+      #- icon: twitter
+      #  href: https://twitter.com
+format:
+  html:
+    theme:
+      - lux
+      - brand
+    css: styles.css
+    toc: true
+
+
+
