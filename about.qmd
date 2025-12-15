@@ -1,0 +1,17 @@
+---
+title: "About Englacial"
+image: images/IMG_4107.jpg
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/englacial
+
+---
+
+Englacial is a residency project funded by [Astera](https://astera.org/). Our mission is to connect observational data sources to numerical models of Earth's ice sheets. We do this by building tools that make it easy for researchers to acesss data and reproducibly create comparisons against numerical models.
+
+The team currently consists of [Thomas Teisberg](https://www.thomasteisberg.com/) and [Shane Grigsby](https://www.linkedin.com/in/shane-grigsby).
+
+Feel free to get in touch at [thomas.teisberg@astera.org](mailto:thomas.teisberg@astera.org).
