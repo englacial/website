@@ -21,11 +21,18 @@
     "text": "Experience\nAstera Institute | Resident\nZipline International | Technical Program Manager"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "News and updates",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "No matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Englacial",
+    "section": "",
+    "text": "Englacial is building open-source infrastructure to accelerate our understanding of the Antarctic and Greenland Ice Sheets.\nOur goal is to connect observational data sources to numerical models of Earth’s ice sheets. We do this by building tools that make it easy for researchers to acesss data and reproducibly create comparisons against numerical models.\nWe’re funded by Astera with a mandate to accelerate our understanding of Earth’s ice sheets while doing 100% of our work in the open.\n\n  \n    \n      \n    \n    \n      \n        xOPR Data Access Tooling\n        xOPR is a library for easy, reproducible access to polar radar sounder data in the Python data ecosystem. xOPR provides access to a library of more than 2 PB of polar radar sounder data in the Open Polar Radar catalog.\n        \n          \n            Find xOPR on  GitHub\n          \n        \n      \n    \n  \n\n\n  \n    \n      \n    \n    \n      \n        Living Data Products\n        Living data products are derived data pipelines, built as open-source software tools. We're currently funding 5 teams to build reproducible data pipelines that transform observational data into model-ready data products."
   },
   {
     "objectID": "shane.html",
@@ -49,24 +56,10 @@
     "text": "Experience\nNational Geospatial-Intelligence Agency | Program Manager\nNASA Goddard Space Flight Center | Assistant Scientist"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Englacial",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Englacial",
     "section": "",
-    "text": "Open Science Infrastructure for Earth’s Ice Sheets"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "News and updates",
-    "section": "",
-    "text": "Post With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nNov 28, 2025\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "Englacial is a residency project funded by Astera. Our mission is to connect observational data sources to numerical models of Earth’s ice sheets. We do this by building tools that make it easy for researchers to acesss data and reproducibly create comparisons against numerical models.\nThe team currently consists of Thomas Teisberg and Shane Grigsby.\nFeel free to get in touch at thomas.teisberg@astera.org."
   }
 ]
