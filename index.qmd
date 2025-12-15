@@ -1,19 +1,57 @@
 ---
 title: "Englacial"
-image: IMG_4107.jpg
+image: images/IMG_4107.jpg
 about:
   template: jolla
   links:
-   # - icon: twitter
-   #   text: Twitter
-   #   href: https://twitter.com
-   # - icon: linkedin
-   #   text: LinkedIn
-   #   href: https://linkedin.com
     - icon: github
       text: Github
       href: https://github.com/englacial
 
 ---
 
-Open Science Infrastructure for Earth's Ice Sheets
+Englacial is building open-source infrastructure to accelerate our understanding of the Antarctic and Greenland Ice Sheets.
+
+Our goal is to connect observational data sources to numerical models of Earth's ice sheets. We do this by building tools that make it easy for researchers to acesss data and reproducibly create comparisons against numerical models.
+
+We're funded by [Astera](https://astera.org/) with a mandate to accelerate our understanding of Earth's ice sheets while doing 100% of our work in the open.
+
+```{=html}
+
+<div class="card mb-3">
+  <div class="grid g-0">
+    <div class="g-col-md-4">
+      <img src="images/xopr-logo.png" class="img-fluid rounded-start" alt="xOPR" style="max-height: 12rem;">
+    </div>
+    <div class="g-col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">xOPR Data Access Tooling</h5>
+        <p class="card-text">xOPR is a library for easy, reproducible access to polar radar sounder data in the Python data ecosystem. xOPR provides access to a library of more than 2 PB of polar radar sounder data in the Open Polar Radar catalog.</p>
+        <p class="card-text"><small class="text-muted">
+          <a href="https://github.com/englacial/xopr">
+            Find xOPR on <i class="bi bi-github"></i> GitHub
+          </a>
+        </small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="grid g-0">
+    <div class="g-col-md-4">
+      <img src="images/ldp-logo.png" class="img-fluid rounded-start" alt="xOPR" style="max-height: 12rem;">
+    </div>
+    <div class="g-col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Living Data Products</h5>
+        <p class="card-text">Living data products are derived data pipelines, built as open-source software tools. We're currently funding 5 teams to build reproducible data pipelines that transform observational data into model-ready data products.</p>
+        <!-- <p class="card-text"><small class="text-muted">
+          
+        </small></p> -->
+      </div>
+    </div>
+  </div>
+</div>
+```
+
