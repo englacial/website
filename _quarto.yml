@@ -6,7 +6,8 @@ website:
   description: "Open Science Infrastructure for Earth's Ice Sheets"
   site-url: "https://englacial.org"
   repo-url: "https://github.com/englacial/website"
-  title: "englacial"
+  title: "<img src='/images/logo_snowflake.png' style='max-height: 1.5em;' /> englacial"
+  favicon: images/logo_snowflake.png
   navbar:
     right:
       # - text: "team"
@@ -23,9 +24,8 @@ website:
           href: https://github.com/englacial/xopr
         - text: Living Data Products
           href: https://astera.org/call-for-proposals-living-data-products-for-ice-sheet-models/
-      #  href: about.qmd
-      # - text: "blog"
-      #   href: blog.qmd
+      - text: "updates"
+        href: updates.qmd
       - icon: github
         href: https://github.com/englacial
       #- icon: rss
