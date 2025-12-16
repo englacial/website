@@ -5,7 +5,7 @@ about:
   template: jolla
   links:
     - icon: github
-      text: Github
+      text: GitHub
       href: https://github.com/englacial
 
 ---
@@ -46,9 +46,9 @@ We're funded by [Astera](https://astera.org/) with a mandate to accelerate our u
       <div class="card-body">
         <h5 class="card-title">Living Data Products</h5>
         <p class="card-text">Living data products are derived data pipelines, built as open-source software tools. We're currently funding 5 teams to build reproducible data pipelines that transform observational data into model-ready data products.</p>
-        <!-- <p class="card-text"><small class="text-muted">
-          
-        </small></p> -->
+        <p class="card-text"><small class="text-muted">
+          Read about <a href="posts/20251216-living-data-products/ldp.html">grantees here</a>
+        </small></p>
       </div>
     </div>
   </div>
