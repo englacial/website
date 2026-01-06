@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - static
 
 website:
   description: "Open Science Infrastructure for Earth's Ice Sheets"
