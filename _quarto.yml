@@ -22,10 +22,11 @@ website:
         href: about.qmd
       - text: "projects"
         menu:
-        - text: xOPR
+        - text: "xOPR&nbsp;&nbsp;{{< fa arrow-up-right-from-square >}}"
           href: https://github.com/englacial/xopr
+          target: _blank
         - text: Living Data Products
-          href: https://astera.org/call-for-proposals-living-data-products-for-ice-sheet-models/
+          href: pages/2025-living-data-products.qmd
       - text: "updates"
         href: updates.qmd
       - icon: github
