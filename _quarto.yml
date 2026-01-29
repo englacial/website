@@ -23,9 +23,9 @@ website:
       - text: "models"
         menu:
         - text: "AWS (new)"
-          href: /models_aws/
+          href: /static/models_aws/
         - text: "GCS (current)"
-          href: /models_gcs/
+          href: /static/models_gcs/
       - text: "projects"
         menu:
         - text: "xOPR&nbsp;&nbsp;{{< fa arrow-up-right-from-square >}}"
