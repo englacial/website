@@ -21,11 +21,7 @@ website:
       - text: "about"
         href: about.qmd
       - text: "models"
-        menu:
-        - text: "AWS (new)"
-          href: /static/models_aws/
-        - text: "GCS (current)"
-          href: /static/models_gcs/
+        href: /static/models/
       - text: "projects"
         menu:
         - text: "xOPR&nbsp;&nbsp;{{< fa arrow-up-right-from-square >}}"
