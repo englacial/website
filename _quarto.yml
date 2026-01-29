@@ -20,6 +20,12 @@ website:
       #     href: shane.qmd
       - text: "about"
         href: about.qmd
+      - text: "models"
+        menu:
+        - text: "AWS (new)"
+          href: /models_aws/
+        - text: "GCS (current)"
+          href: /models_gcs/
       - text: "projects"
         menu:
         - text: "xOPR&nbsp;&nbsp;{{< fa arrow-up-right-from-square >}}"
