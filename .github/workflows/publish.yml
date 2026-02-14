@@ -13,8 +13,35 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Checkout ismip-viewer
+        uses: actions/checkout@v4
+        with:
+          repository: englacial/ismip-viewer
+          path: _ismip-viewer
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build JS viewer
+        working-directory: _ismip-viewer/js-viewer
+        run: npm ci && npm run build
+
+      - name: Copy viewer build to static/models
+        run: |
+          rm -rf static/models
+          cp -r _ismip-viewer/js-viewer/dist static/models
+
+      - name: Inject back-link into viewer title
+        run: |
+          sed -i 's|</body>|<script>new MutationObserver((_,o)=>{const e=document.getElementById("viewer-title");if(e){e.innerHTML='\''<a href="/models.html" style="color:inherit">About this ISMIP6 Viewer</a>'\'';o.disconnect()}}).observe(document.body,{childList:true,subtree:true})</script></body>|' static/models/index.html
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install ismip6-viewer extension
+        run: quarto add englacial/ismip-viewer --no-prompt
 
       - name: Render Quarto Project
         run: quarto render

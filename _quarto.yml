@@ -21,7 +21,11 @@ website:
       - text: "about"
         href: about.qmd
       - text: "models"
-        href: /static/models/
+        menu:
+        - text: Viewer
+          href: /static/models/
+        - text: Examples
+          href: models.qmd
       - text: "projects"
         menu:
         - text: "xOPR&nbsp;&nbsp;{{< fa arrow-up-right-from-square >}}"
