@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Englacial –  englacial</title>
+<title>ISMIP6 Model Viewer –  englacial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,6 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -81,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -99,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -152,35 +153,112 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-this" id="toc-what-is-this" class="nav-link active" data-scroll-target="#what-is-this">What is this?</a>
+  <ul class="collapse">
+  <li><a href="#more-about-ismip6-and-the-context-behind-these-models" id="toc-more-about-ismip6-and-the-context-behind-these-models" class="nav-link" data-scroll-target="#more-about-ismip6-and-the-context-behind-these-models">More about ISMIP6 and the context behind these models</a></li>
+  <li><a href="#open-source" id="toc-open-source" class="nav-link" data-scroll-target="#open-source">Open Source</a></li>
+  </ul></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a>
+  <ul class="collapse">
+  <li><a href="#subglacial-temperature" id="toc-subglacial-temperature" class="nav-link" data-scroll-target="#subglacial-temperature">Subglacial temperature</a></li>
+  <li><a href="#grounding-line-retreat-and-sub-ice-shelf-melt" id="toc-grounding-line-retreat-and-sub-ice-shelf-melt" class="nav-link" data-scroll-target="#grounding-line-retreat-and-sub-ice-shelf-melt">Grounding line retreat and sub-ice shelf melt</a></li>
+  <li><a href="#surface-mass-balance" id="toc-surface-mass-balance" class="nav-link" data-scroll-target="#surface-mass-balance">Surface mass balance</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="images/IMG_4107.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Englacial</h1>
+<h1 class="title">ISMIP6 Model Viewer</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content" id="quarto-document-content">
-<p>Englacial is a residency project funded by <a href="https://astera.org/">Astera</a>. Our mission is to connect observational data sources to numerical models of Earth’s ice sheets. We do this by building tools that make it easy for researchers to acesss data and reproducibly create comparisons against numerical models.</p>
-<p>The team currently consists of <a href="https://www.thomasteisberg.com/">Thomas Teisberg</a> and <a href="https://www.linkedin.com/in/shane-grigsby">Shane Grigsby</a>.</p>
-<p>Feel free to get in touch at <a href="mailto:thomas.teisberg@astera.org">thomas.teisberg@astera.org</a>.</p>
+  
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://github.com/englacial" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+</header>
+
+
+<section id="what-is-this" class="level1">
+<h1>What is this?</h1>
+<p>This is a visualization tool for exploring and comparing model outputs from the Ice Sheet Model Inter-comparison Project for CMIP6 (ISMIP6). <a href="https://www.ismip.org/">ISMIP</a> is an international collaborative effort to compare the behavior of ice sheet models under a standardized set of experiments. This tool is not affiliated with ISMIP – it’s just a visualizer of publicly-available ISMIP6 outputs, which are <a href="https://source.coop/englacial/ismip6">hosted here on source.coop</a>.</p>
+<p>The tool is a prototype article for a larger push we’re working on to build backend infrastructure for model-data comparisons. If you’re interested in that, feel free to check back here as we add more information or reach out to either shane.grigsby@astera.org or thomas.teisberg@astera.org.</p>
+<p>We hope this tool is useful and interesting to the scientific community. If you find it useful or you find issues, we encourage you to email us or <a href="https://github.com/englacial/ismip-indexing/issues/new">open an issue</a>.</p>
+<section id="more-about-ismip6-and-the-context-behind-these-models" class="level2">
+<h2 class="anchored" data-anchor-id="more-about-ismip6-and-the-context-behind-these-models">More about ISMIP6 and the context behind these models</h2>
+<p>This tool visualizes only model outputs from the ISMIP6 Antarctica ensemble for now. The general structure of those experiments is described <a href="https://theghub.org/groups/ismip6/wiki/MainPage/ISMIP6ProjectionsAntarctica">on the ISMIP6 wiki</a>. For details, please read the <a href="https://tc.copernicus.org/articles/14/3033/2020/">ISMIP6 Antarctica results paper</a> in <em>The Cryosphere</em>.</p>
+</section>
+<section id="open-source" class="level2">
+<h2 class="anchored" data-anchor-id="open-source">Open Source</h2>
+<p>This tool is open source, and consists of two components: a front end viewer, and a back-end connection to the virtualized dataset. Both of these components are client side and run fully within your browser. Visit the <a href="https://github.com/englacial/ismip-viewer">ismip-viewer repository</a> to contribute or report issues related to the viewer, or the <a href="https://github.com/earth-mover/icechunk">icechunk-js library</a> to contribute or report issues to the icechunk client.</p>
+</section>
+</section>
+<section id="getting-started" class="level1">
+<h1>Getting started</h1>
+<p>Feel free to play around with the <a href="./static/models/">dedicated viewer</a> where you can add panels to compare models or experiments side-by-side, or just explore a single dataset at a time. The viewer panels are embeddable using <a href="https://mystmd.org">MyST</a> and <a href="https://quarto.org">Quarto</a> (or directly using an iframe); we’ve done that below with a few example comparisons we think are interesting.</p>
+<section id="subglacial-temperature" class="level2">
+<h2 class="anchored" data-anchor-id="subglacial-temperature">Subglacial temperature</h2>
+<ul>
+<li><strong>Variable:</strong> <code>litempbotgr</code> – Basal temperature beneath grounded ice sheet (K)</li>
+<li><strong>Models:</strong> AWI/PISM1, DOE/MALI, LSCE/GRISLI2, NCAR/CISM</li>
+<li><strong>Experiment:</strong> exp05</li>
+</ul>
+<p>There are few direct measurements of the temperature profile within or beneath ice sheets. As a result, basal temperature (temperature at the ice-bedrock interface) is poorly constrained. Models resolve a wide range of temperatures, ranging from deeply frozen to at or near the pressure melting point.</p>
+<iframe src="./static/models/?autoload=true&amp;variable=litempbotgr&amp;panels=[     {&quot;model&quot;%3A&quot;AWI_PISM1&quot;%2C&quot;experiment&quot;%3A&quot;exp05&quot;}%2C     {&quot;model&quot;%3A&quot;DOE_MALI&quot;%2C&quot;experiment&quot;%3A&quot;exp05&quot;}%2C     {&quot;model&quot;%3A&quot;LSCE_GRISLI2&quot;%2C&quot;experiment&quot;%3A&quot;exp05&quot;}%2C     {&quot;model&quot;%3A&quot;NCAR_CISM&quot;%2C&quot;experiment&quot;%3A&quot;exp05&quot;}   ]&amp;controls=time&amp;store_url=https%3A%2F%2Fdata.source.coop%2Fenglacial%2Fismip6%2Ficechunk-ais%2F&amp;default_year=2025&amp;ignore_value=0" width="100%" height="750" style="border:1px solid #ccc;border-radius:5px" frameborder="0" loading="lazy"></iframe>
+<p>For an accessible introduction to this topic, see Bethan Davies’ page on <a href="https://www.antarcticglaciers.org/glacier-processes/glacier-flow-2/glacial-processes/">glacier thermal regimes</a>.</p>
+</section>
+<section id="grounding-line-retreat-and-sub-ice-shelf-melt" class="level2">
+<h2 class="anchored" data-anchor-id="grounding-line-retreat-and-sub-ice-shelf-melt">Grounding line retreat and sub-ice shelf melt</h2>
+<ul>
+<li><strong>Variable:</strong> <code>libmassbffl</code> – Basal mass balance flux beneath floating ice (kg m<sup>-2</sup> s<sup>-1</sup>)</li>
+<li><strong>Model:</strong> DOE/MALI</li>
+<li><strong>Experiments:</strong> exp05, exp07</li>
+</ul>
+<p><code>libmassbffl</code> shows the melt rates under floating ice shelves. It’s a good way to look at a major component of Antarctic mass loss and also visualize grounding line retreat. Experiments 5 and 7 represent the same assumptions but with different climate forcings. <code>exp05</code> is a high-emissions scenario (RCP 8.5) while <code>exp07</code> is a low-emission scenario (RCP 2.6).</p>
+<p>This is a good comparison to zoom in on, play with the time slider to see how grounding lines evolve over time, and to use the color scale options as needed.</p>
+<iframe src="./static/models/?autoload=true&amp;variable=libmassbffl&amp;panels=[     {&quot;model&quot;%3A&quot;DOE_MALI&quot;%2C&quot;experiment&quot;%3A&quot;exp05&quot;}%2C     {&quot;model&quot;%3A&quot;DOE_MALI&quot;%2C&quot;experiment&quot;%3A&quot;exp07&quot;}   ]&amp;controls=time&amp;store_url=https%3A%2F%2Fdata.source.coop%2Fenglacial%2Fismip6%2Ficechunk-ais%2F&amp;default_year=2025&amp;ignore_value=0&amp;layout=vertical" width="100%" height="750" style="border:1px solid #ccc;border-radius:5px" frameborder="0" loading="lazy"></iframe>
+<p>For an accessible introduction to this topic, see Bethan Davies’ pages on <a href="https://www.antarcticglaciers.org/glacier-processes/grounding-lines/">grounding lines</a> and <a href="https://www.antarcticglaciers.org/glaciers-and-climate/changing-antarctica/shrinking-ice-shelves/">ice shelves</a>.</p>
+</section>
+<section id="surface-mass-balance" class="level2">
+<h2 class="anchored" data-anchor-id="surface-mass-balance">Surface mass balance</h2>
+<ul>
+<li><strong>Variable:</strong> <code>acabf</code> – Surface mass balance flux (kg m<sup>-2</sup> s<sup>-1</sup>)</li>
+<li><strong>Models:</strong> DOE/MALI, AWI/PISM1</li>
+<li><strong>Experiments:</strong> exp05, exp07</li>
+</ul>
+<p>Surface mass balance refers to the net accumulation and ablation occurring at the surface of an ice sheet. In most of Antarctica, this primarily means “how much snow is falling?” Antarctica is huge, so small differences in snowfall over big areas can make an enormous difference. Patterns of surface mass balance change over time and vary with the selected climate forcing, so be sure to explore the time slider and look at differences between the low-emission (<code>exp07</code>) and high-emissions (<code>exp05</code>) experiments.</p>
+<iframe src="./static/models/?autoload=true&amp;variable=acabf&amp;panels=[     {&quot;model&quot;%3A&quot;DOE_MALI&quot;%2C&quot;experiment&quot;%3A&quot;exp05&quot;}%2C     {&quot;model&quot;%3A&quot;DOE_MALI&quot;%2C&quot;experiment&quot;%3A&quot;exp07&quot;}%2C     {&quot;model&quot;%3A&quot;AWI_PISM1&quot;%2C&quot;experiment&quot;%3A&quot;exp05&quot;}%2C     {&quot;model&quot;%3A&quot;AWI_PISM1&quot;%2C&quot;experiment&quot;%3A&quot;exp07&quot;}   ]&amp;controls=time&amp;store_url=https%3A%2F%2Fdata.source.coop%2Fenglacial%2Fismip6%2Ficechunk-ais%2F&amp;default_year=2025" width="100%" height="750" style="border:1px solid #ccc;border-radius:5px" frameborder="0" loading="lazy"></iframe>
+<p>For an accessible introduction to this topic, see Bethan Davies’ page on <a href="https://www.antarcticglaciers.org/glaciers-and-climate/changing-antarctica/antarctic-ice-sheet-surface-mass-balance/">Antarctic Ice Sheet mass balance</a>.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
