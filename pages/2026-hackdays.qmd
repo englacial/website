@@ -5,8 +5,10 @@ title: "Connected Data Products Hackdays"
 ```{=html}
 <div style="text-align: center; margin: 1.5rem 0 2rem;">
   <p style="font-size: 1.1rem; margin: 0.75rem;">Applications are open for the 2026 Connected Data Products Hackdays!<br></p>
-  <a href="https://tally.so/r/LZb0Aj" class="btn btn-primary btn-lg" style="font-size: 1.25rem; padding: 0.75rem 2.5rem;" target="_blank">Apply Here</a>
-  <p style="font-size: 1.1rem; margin: 0.75rem;">Applications will reviewed on a rolling basis <strong>starting March 9th</strong>. The last day to apply is <strong>March 20th</strong>.</p>
+  <a href="https://forms.englacial.org/hackdays2026" class="btn btn-info btn-lg" style="font-size: 1.25rem; padding: 0.75rem 2.5rem;" target="_blank">Apply Here</a>
+  <p style="font-size: 1.1rem; margin: 0.75rem;">Applications will reviewed on a rolling basis <strong>starting March 9th</strong>.</p>
+  <p>The last day to apply is <strong>March 20th</strong>.</p>
+  <p>Travel support is available for all non-local participants.</p>
 </div>
 ```
 
@@ -16,13 +18,13 @@ The *Building Open Connected Scientific Data Products for the Cryosphere* hackda
 
 This three-day workshop brings together scientists, data providers, open-source engineers, and other experts to collaboratively improve open science workflows and test new ways of building open, connected scientific data products.
 
-We'll explore new tools and publishing alternatives for today's changing science landscape, while we design and co-create for a future where results are available faster and reproducing and building on the work of others is easier. We welcome observationalists, modellers, and engineers to come exchange ideas and tools for building dynamic links between data and models through open source software.
+We'll explore new tools and publishing alternatives for today's changing science landscape, while we design and co-create for a future where results are available faster and reproducing and building on the work of others is easier. We welcome everyone to come exchange ideas and tools for building dynamic links between data and models through open source software.
 
 ### What to expect
 
-The workshop will provide time and space for attendees to form small groups and work on building prototypes of connected data products. Instead of traditional talks, we'll feature invited demos -- interactive demonstrations by leaders in open science showcasing tools and data products they have built.
-
-Day 3 will end with time for teams to briefly present their projects and non-traditional artifacts for sharing science.
+The workshop will provide time and space for attendees to form small groups and work on building prototypes of connected data products.
+The first day will feature some brief invited demos and some structured team-finding exercises. Most of days 2 and 3 will be unstructured time to work with your new teams.
+Day 3 will conclude with time for teams to briefly present their projects and non-traditional artifacts for sharing science.
 
 ### Goals
 
@@ -32,26 +34,25 @@ Day 3 will end with time for teams to briefly present their projects and non-tra
 
 ### Invited demos
 
+Instead of traditional talks, we'll feature invited demos -- interactive demonstrations by leaders in open science showcasing tools and data products they have built.
+
 :::::: {.grid}
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
-<!-- TODO: Replace with speaker photo -->
-![](TODO_PHOTO_FERNANDO_PEREZ){fig-alt="Fernando Perez" width="150px" style="border-radius: 50%;"}
+![](/images/hackdays-speakers/fernando-perez.png){fig-alt="Fernando Perez" width="150px" style="border-radius: 50%;"}
 
 **Fernando Perez**
 :::
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
-<!-- TODO: Replace with speaker photo -->
-![](TODO_PHOTO_JESSICA_SCHEICK){fig-alt="Jessica Scheick" width="150px" style="border-radius: 50%;"}
+![](/images/hackdays-speakers/jessica-scheick.png){fig-alt="Jessica Scheick" width="150px" style="border-radius: 50%;"}
 
 **Jessica Scheick**\
 Accessing ICESat-2 data with icepyx
 :::
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
-<!-- TODO: Replace with speaker photo -->
-![](TODO_PHOTO_MICKEY_MACKIE){fig-alt="Mickey MacKie" width="150px" style="border-radius: 50%;"}
+![](/images/hackdays-speakers/mickey-mackie.png){fig-alt="Mickey MacKie" width="150px" style="border-radius: 50%;"}
 
 **Mickey MacKie**\
 Geostatistical interpolation with GStatSim
@@ -59,15 +60,7 @@ Geostatistical interpolation with GStatSim
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
 <!-- TODO: Replace with speaker photo -->
-![](TODO_PHOTO_JOE_KENNEDY){fig-alt="Joe Kennedy" width="150px" style="border-radius: 50%;"}
-
-**Joe Kennedy**\
-Processing NISAR data into the ITS_LIVE data product
-:::
-
-::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
-<!-- TODO: Replace with speaker photo -->
-![](TODO_PHOTO_PRACHEE_AVASTHI){fig-alt="Prachee Avasthi" width="150px" style="border-radius: 50%;"}
+![](/images/hackdays-speakers/prachee-avasthi.png){fig-alt="Prachee Avasthi" width="150px" style="border-radius: 50%;"}
 
 **Prachee Avasthi**\
 Alternatives to journal publications
@@ -75,10 +68,18 @@ Alternatives to journal publications
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
 <!-- TODO: Replace with speaker photo -->
-![](TODO_PHOTO_SHANE_GRIGSBY){fig-alt="Shane Grigsby" width="150px" style="border-radius: 50%;"}
+![](/images/hackdays-speakers/joseph-kennedy.png){fig-alt="Joseph Kennedy" width="150px" style="border-radius: 50%;"}
+
+**Jospeh Kennedy**\
+Processing NISAR data into the ITS_LIVE data product
+:::
+
+::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
+<!-- TODO: Replace with speaker photo -->
+![](/images/hackdays-speakers/shane-grigsby.png){fig-alt="Shane Grigsby" width="150px" style="border-radius: 50%;"}
 
 **Shane Grigsby**\
-Accessing xOPR / ISMIP data
+Programmatic, cloud-native access to OPR and ISMIP data
 :::
 
 ::::::
