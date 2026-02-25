@@ -33,6 +33,8 @@ website:
           target: _blank
         - text: Living Data Products
           href: pages/2025-living-data-products.qmd
+        - text: Connected Data Products Hackdays
+          href: pages/2026-hackdays.qmd
       - text: "updates"
         href: updates.qmd
       - icon: github

@@ -36,7 +36,7 @@ Day 3 will conclude with time for teams to briefly present their projects and no
 
 ### Invited demos
 
-Instead of traditional talks, we'll feature invited demos -- interactive demonstrations by leaders in open science showcasing tools and data products they have built.
+Instead of traditional talks, we'll feature invited demos -- interactive demonstrations by leaders in open science showcasing tools and data products they have built. We're still confirming a few demos, but demo-ers will include:
 
 :::::: {.grid}
 
@@ -45,6 +45,13 @@ Instead of traditional talks, we'll feature invited demos -- interactive demonst
 
 **Prachee Avasthi**\
 Alternatives to journal publications
+:::
+
+::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
+![](/images/hackdays-speakers/shane-grigsby.png){fig-alt="Shane Grigsby" width="150px" style="border-radius: 50%;"}
+
+**Shane Grigsby**\
+Programmatic, cloud-native access to OPR and ISMIP data
 :::
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
@@ -68,28 +75,22 @@ Geostatistical interpolation with GStatSim
 Publishing connected data product documentation with MyST
 :::
 
+<!--
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
 ![](/images/hackdays-speakers/jessica-scheick.png){fig-alt="Jessica Scheick" width="150px" style="border-radius: 50%;"}
 
 **Jessica Scheick**\
 Accessing ICESat-2 data with icepyx
 :::
+-->
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
-![](/images/hackdays-speakers/tasha-snow.png){fig-alt="Tasha Snow" width="150px" style="border-radius: 50%;"}
+![](/images/hackdays-speakers/tasha-snow.jpg){fig-alt="Tasha Snow" width="150px" style="border-radius: 50%;"}
 
 **Tasha Snow**\
-Reproducible computational research with CryoCloud
+Enabling living data: open source tooling and infrastructure for the next generation of science
 :::
 
-<!--
-::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
-![](/images/hackdays-speakers/shane-grigsby.png){fig-alt="Shane Grigsby" width="150px" style="border-radius: 50%;"}
-
-**Shane Grigsby**\
-Programmatic, cloud-native access to OPR and ISMIP data
-:::
--->
 
 ::::::
 
