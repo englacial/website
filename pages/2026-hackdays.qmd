@@ -44,51 +44,49 @@ Instead of traditional talks, we'll feature invited demos -- interactive demonst
 ![](/images/hackdays-speakers/prachee-avasthi.png){fig-alt="Prachee Avasthi" width="150px" style="border-radius: 50%;"}
 
 **Prachee Avasthi**\
-Alternatives to journal publications
+[Alternatives](https://thestacks.org/) to journal publications
 :::
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
 ![](/images/hackdays-speakers/shane-grigsby.png){fig-alt="Shane Grigsby" width="150px" style="border-radius: 50%;"}
 
 **Shane Grigsby**\
-Programmatic, cloud-native access to OPR and ISMIP data
+Programmatic, cloud-native access to [OPR](https://docs.englacial.org/xopr/) and [ISMIP data](https://github.com/englacial/ismip-indexing)
 :::
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
 ![](/images/hackdays-speakers/joseph-kennedy.png){fig-alt="Joseph Kennedy" width="150px" style="border-radius: 50%;"}
 
 **Joeseph Kennedy**\
-Processing NISAR data into the ITS_LIVE data product
+Processing NISAR data into the [ITS_LIVE](https://its-live.jpl.nasa.gov/) data product
 :::
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
 ![](/images/hackdays-speakers/mickey-mackie.png){fig-alt="Mickey MacKie" width="150px" style="border-radius: 50%;"}
 
 **Mickey MacKie**\
-Geostatistical interpolation with GStatSim
+Geostatistical interpolation with [GStatSim](https://gatorglaciology.github.io/gstatsimbook/intro.html)
 :::
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
 ![](/images/hackdays-speakers/fernando-perez.png){fig-alt="Fernando Perez" width="150px" style="border-radius: 50%;"}
 
 **Fernando Perez**\
-Publishing connected data product documentation with MyST
+Publishing connected data product documentation with [MyST](https://mystmd.org/)
 :::
 
-<!--
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
-![](/images/hackdays-speakers/jessica-scheick.png){fig-alt="Jessica Scheick" width="150px" style="border-radius: 50%;"}
+![](/images/hackdays-speakers/jessica-scheick.jpg){fig-alt="Jessica Scheick" width="150px" style="border-radius: 50%;"}
 
 **Jessica Scheick**\
-Accessing ICESat-2 data with icepyx
+Accessing ICESat-2 data with [icepyx](https://icepyx.readthedocs.io/en/latest/)
 :::
--->
 
 ::: {.g-col-6 .g-col-md-4 style="text-align: center;"}
 ![](/images/hackdays-speakers/tasha-snow.jpg){fig-alt="Tasha Snow" width="150px" style="border-radius: 50%;"}
 
 **Tasha Snow**\
-Enabling living data: open source tooling and infrastructure for the next generation of science
+Enabling living data: open source [tooling and infrastructure](https://cryointhecloud.com/) for the next generation of science
 :::
 
 
