@@ -185,8 +185,11 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#filling-in-the-map" id="toc-filling-in-the-map" class="nav-link active" data-scroll-target="#filling-in-the-map">Filling in the map</a></li>
+  <li><a href="#a-bit-of-history" id="toc-a-bit-of-history" class="nav-link active" data-scroll-target="#a-bit-of-history">A bit of history</a></li>
+  <li><a href="#topography-and-sea-level-rise" id="toc-topography-and-sea-level-rise" class="nav-link" data-scroll-target="#topography-and-sea-level-rise">Topography and sea level rise</a></li>
+  <li><a href="#filling-in-the-map" id="toc-filling-in-the-map" class="nav-link" data-scroll-target="#filling-in-the-map">Filling in the map</a></li>
   <li><a href="#a-better-visualization-for-the-purpose" id="toc-a-better-visualization-for-the-purpose" class="nav-link" data-scroll-target="#a-better-visualization-for-the-purpose">A better visualization for the purpose</a></li>
+  <li><a href="#equivalent-gridded-survey-spacing-maps" id="toc-equivalent-gridded-survey-spacing-maps" class="nav-link" data-scroll-target="#equivalent-gridded-survey-spacing-maps">Equivalent gridded survey spacing maps</a></li>
   <li><a href="#use-these-maps" id="toc-use-these-maps" class="nav-link" data-scroll-target="#use-these-maps">Use these maps</a></li>
   <li><a href="#whats-missing-here" id="toc-whats-missing-here" class="nav-link" data-scroll-target="#whats-missing-here">What’s missing here</a></li>
   </ul>
@@ -226,6 +229,11 @@ div.csl-indent {
 </header>
 
 
+<p>Radar sounders are one of our core tools for understanding Antarctica and Greenland. Both ice sheets cover enormous land masses. Unlike the rest of the world, we can’t directly observe where the land actually is because it’s covered by hundreds to thousands of meters of ice. Radar sounders allow us, among other things, to see through the ice and map what the topography looks like beneath the ice. If radar sounders are entirely new to you, <a href="https://lindzey.github.io/blog/2015/07/27/a-brief-introduction-to-ice-penetrating-radar/">Laura Lindzey’s blog post</a> is a nice introduction.</p>
+<p>It’s a common refrain that we need more data, but the maps we have don’t tell that story well. This post will give a bit of an introduction to why radar sounder data is important, but the core point is to argue that we should use a different set of maps in thinking about where we need more data and why.</p>
+<p>(Side note: Radar sounders are also called radio-echo sounders, ice-penetrating radar, radar depth sounders, ground-penetrating radar, and all sorts of other names, depending on the context. I apologize on behalf of my field.)</p>
+<section id="a-bit-of-history" class="level3">
+<h3 class="anchored" data-anchor-id="a-bit-of-history">A bit of history</h3>
 <p>Since the 1950s, we’ve known that radar could be used to map the internal structure and the bedrock beneath glaciers and ice caps. In the 1960s and 70s, a collaborative effort between the Scott Polar Research Institute in the UK, the NSF in the US, and the Technical University of Denmark carried out an ambitious effort to map the the bedrock beneath Antarctica and Greenland, allowing estimates for the first time of one of the most basic questions: “how much ice is there?”</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -235,10 +243,24 @@ div.csl-indent {
 </div>
 <p>By 1982, we had a preliminary answer to this question: 30.11 +/- 2.5 million cubic kilometers, based off of “flight tracks covering 50% of the Antarctic Ice Sheet on a 50 to 100 km square grid,” as published by <span class="citation" data-cites="drewry_measured_1982">Drewry et al. (<a href="#ref-drewry_measured_1982" role="doc-biblioref">1982</a>)</span> (of the above image).</p>
 <p>Sixty-some years later, we’re still using radar sounder data collected by aircraft to refine our estimates of the total mass and its associated potential sea level rise (the current best estimate is slightly lower at 26 +/- 0.4 million cubic kilometers, corresponding to 57.9 +/- 0.9 meters of equivalent sea level rise for Antarctica <span class="citation" data-cites="morlighem_deep_2019">(<a href="#ref-morlighem_deep_2019" role="doc-biblioref">Morlighem et al. 2019</a>)</span>, if you’re curious).</p>
-<p>We now also have a more pressing question: “how much of this ice could end up in the oceans in the next 20 years? 50 years? 100 years?” As it turns out, knowing where the the bedrock is beneath the ice, especially in the coastal regions where ice flows out towards the ocean, is crucially important to answering this question. (If you’re curious about why bedrock topography is so important to predicting sea level rise, <a href="https://blogs.egu.eu/divisions/cr/2016/06/22/marine-ice-sheet-instability-for-dummies-2/">this is a great explainer</a>.)</p>
+</section>
+<section id="topography-and-sea-level-rise" class="level3">
+<h3 class="anchored" data-anchor-id="topography-and-sea-level-rise">Topography and sea level rise</h3>
+<p>Although this tell us how much sea level rise Antarctica could cause, no one is projecting that all of Antarctica will melt anytime soon. The much more pressing question is: “how much of this ice could end up in the oceans in the next 20 years? 50 years? 100 years?”</p>
+<p>As it turns out, knowing where the the bedrock is beneath the ice, especially in the coastal regions where ice flows out towards the ocean, is crucially important to answering this question.</p>
+<p>Most of coastal Antarctica consists of so-called “marine-terminating glaciers,” meaning that the ice flows all the way out to the ocean. This ice-ocean interface is where most of the melting happens, particularly when warmer water from deep in the ocean comes in contact with the ice. As the ice melts, the glacier “retreats” backward. If the slope of the bed topography gets deeper as you go further inland, the area of the ice in contact with warm ocean water increases, thus increasing the rate of melt, and increasing the rate of retreat. This is the basic positive feedback loop underpinning the idea of “marine ice sheet instability.”</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/misi.png" class="img-fluid figure-img"></p>
+<figcaption>A conceptual illustration of how marine ice sheet instability operates on a reverse sloping bed, taken from <span class="citation" data-cites="pattyn_uncertain_2020">Pattyn and Morlighem (<a href="#ref-pattyn_uncertain_2020" role="doc-biblioref">2020</a>)</span>.</figcaption>
+</figure>
+</div>
+<p>So if the topography of the bedrock gets lower and lower as you go inland (as it generally does in large regions of Antarctica), this is bad news for sea level rise. On the other hand, a small hill or ridge in that topography might create a point where the glacier slows its rate of melt and perhaps gets held up for years (or hundreds of years). This is all a dramatic oversimplification, but hopefully it provides a general idea of why understanding near-coastal bedrock topography is extremely important to making good predictions about sea level rise.</p>
+<p>The full details are way beyond the scope of this post, but if you want to dive in more to why bedrock topography is so important to predicting sea level rise, <a href="https://blogs.egu.eu/divisions/cr/2016/06/22/marine-ice-sheet-instability-for-dummies-2/">this is a great explainer</a>.</p>
+</section>
 <section id="filling-in-the-map" class="level3">
 <h3 class="anchored" data-anchor-id="filling-in-the-map">Filling in the map</h3>
-<p>So how are we doing? The problem of getting the bed topography across an ice sheet is often referred to as “filling in the map,” so how filled in are the maps?</p>
+<p>So we need a good map of the topography beneath the ice. We’ve been working on this for 60 years or so. How are we doing? The problem of getting the bed topography across an ice sheet is often referred to as “filling in the map,” so how filled in are the maps?</p>
 <div class="quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
@@ -267,7 +289,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>These three maps show all available radar sounder flight lines to date over Antarctica from 1980, 2014, and 2019. It looks like quite a lot of progress has been made since 1980. It should be a bit surprising, then, that lack of knowledge of bed topography continues to be identified as a leading source of uncertainty in sea level rise estimates (see, for example, <span class="citation" data-cites="pritchard_bedgap:_2014">Pritchard (<a href="#ref-pritchard_bedgap:_2014" role="doc-biblioref">2014</a>)</span>, <span class="citation" data-cites="seroussi_continued_2017">Seroussi et al. (<a href="#ref-seroussi_continued_2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="schlegel_exploration_2018">Schlegel et al. (<a href="#ref-schlegel_exploration_2018" role="doc-biblioref">2018</a>)</span>, or <span class="citation" data-cites="castleman_derivation_2022">Castleman et al. (<a href="#ref-castleman_derivation_2022" role="doc-biblioref">2022</a>)</span>, among many others).</p>
+<p>These three maps show all available radar sounder flight lines to date over Antarctica from 1980, 2014, and 2019. It looks like quite a lot of progress has been made since 1980. <strong>It should be a bit surprising, then, that lack of knowledge of bed topography continues to be identified as a leading source of uncertainty in sea level rise estimates</strong> (see, for example, <span class="citation" data-cites="pritchard_bedgap:_2014">Pritchard (<a href="#ref-pritchard_bedgap:_2014" role="doc-biblioref">2014</a>)</span>, <span class="citation" data-cites="seroussi_continued_2017">Seroussi et al. (<a href="#ref-seroussi_continued_2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="schlegel_exploration_2018">Schlegel et al. (<a href="#ref-schlegel_exploration_2018" role="doc-biblioref">2018</a>)</span>, or <span class="citation" data-cites="castleman_derivation_2022">Castleman et al. (<a href="#ref-castleman_derivation_2022" role="doc-biblioref">2022</a>)</span>, among many others).</p>
 <p>There’s a fundamental problem with using the flight line maps as an indication of bed topography coverage. On the map on the right, for example, each line is roughly 12-18 kilometers wide, but radar sounders (mostly) measure the topography immediately below the aircraft, not over a wide swath. (And those that do measure a swath measure one that is much smaller than 18 kilometers.)</p>
 <p>It’s worth pointing out that most of these maps were not made with the intention of serving as a guide of how much we have left to fill in, but they are, nonetheless, often used that way for lack of anything better.</p>
 <p>To illustrate this point in a more entertaining way, let’s say you were looking at a map of the BART and Caltrain public transit systems in the San Francisco Bay Area, with each route line having a width of 18 kilometers (right) or a more normal width (on the left) to give you some context.</p>
@@ -286,9 +308,9 @@ div.csl-indent {
 </section>
 <section id="a-better-visualization-for-the-purpose" class="level3">
 <h3 class="anchored" data-anchor-id="a-better-visualization-for-the-purpose">A better visualization for the purpose</h3>
-<p>We can draw inspiration for better visualizations from how studies looking at bed topography resolution talk about their recommendations. Quoting from the recommendations of a few selected studies:</p>
+<p>We can draw inspiration for better visualizations from how studies looking at bed topography resolution talk about their recommendations. There have been many studies examining what resolution of bed topography (derived from radar sounder data) is needed to get accurate sea level rise estimates. Quoting from the recommendations of a few selected studies:</p>
 <blockquote class="blockquote">
-<p>In the context of short‐term ice sheet forecast, we show that in coastal regions, the bedrock elevation should be known <strong>at a resolution of the order of one kilometer</strong>. [Durand et al., 2011]</p>
+<p>In the context of short‐term ice sheet forecast, we show that in coastal regions, the bedrock elevation should be known <strong>at a resolution of the order of one kilometer</strong>. <span class="citation" data-cites="durand_impact_2011">(<a href="#ref-durand_impact_2011" role="doc-biblioref">Durand et al. 2011</a>)</span></p>
 </blockquote>
 <blockquote class="blockquote">
 <p>The sea-level contribution indicates a converging behaviour <strong>below a 1 km horizontal resolution</strong>. <span class="citation" data-cites="ruckamp_sensitivity_2020">(<a href="#ref-ruckamp_sensitivity_2020" role="doc-biblioref">Rückamp et al. 2020</a>)</span></p>
@@ -296,8 +318,8 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>Experiments that test spatial resolution requirements suggest that we need bedrock geometry to be <strong>measured at a spatial resolution of 2 km or less</strong> in order to accurately characterize the bedrock topography pinning points and to minimize ice-sheet model uncertainty on 200-year timescales. In particular, we find that at a resolution finer than approximately 2 km (at sensitive glacial regions), estimated SLR contribution converges (Fig. 3). <span class="citation" data-cites="castleman_derivation_2022">(<a href="#ref-castleman_derivation_2022" role="doc-biblioref">Castleman et al. 2022</a>)</span></p>
 </blockquote>
-<p>All of the models discussed here (and all that participated in ISMIP6) discretize the domain into some sort of a grid or mesh, so looking at topography in terms of how it compare to the spatial resolution of the model makes sense.</p>
-<p>One way to think about this is to take small regions and ask “if all of the survey lines in this region had been part of a uniform gridded survey, what would the spacing of those grid lines be?” This gives us a way to plot data density — and the studies above give us some idea of the target metrics. This handy interactive visualization (generated by Claude) shows how this metric maps flight lines to equivalent survey density:</p>
+<p>So our goal is somewhere on the order of 1 to 2 km spacing between radar sounder data. How close are we to that based on our maps? It’s impossible to say while we’re drawing the lines with 10+ kilometer width.</p>
+<p>Another way to map coverage is to take small regions and ask “if all of the survey lines in this region had been part of a uniform gridded survey, what would the spacing of those grid lines be?” This gives us a way to plot data density — and the studies above give us some idea of the target metrics. This handy interactive visualization (generated by Claude) shows how this metric maps flight lines to equivalent survey density:</p>
 <style>
   .cr{display:flex;align-items:center;gap:12px;margin:0 0 10px;font-size:13px;color:var(--color-text-secondary)}
   .cr label{min-width:80px}
@@ -389,6 +411,9 @@ function update(){
 
 gen(18);update();
 </script>
+</section>
+<section id="equivalent-gridded-survey-spacing-maps" class="level3">
+<h3 class="anchored" data-anchor-id="equivalent-gridded-survey-spacing-maps">Equivalent gridded survey spacing maps</h3>
 <p>Applied to all of Antarctica with 30 km grid cells, this is the map we get:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -397,7 +422,7 @@ gen(18);update();
 </figure>
 </div>
 <p>This heatmap reflects a lot of interesting properties of how airborne surveying in Antarctica works. Surveying is concentrated around where there are research facilities (and, therefore, runways). There are, of course, some heavily surveyed areas away from any permanent facilities too. These are the result of dedicated campaigns that usually set up temporary field camps to support intensive surveying in a region of particular interest.</p>
-<p>There’s a lot of white on this map (corresponding to 30 kilometer cells with less than 10 kilometer equivalent grid density) and very little black (corresponding to the roughly 1 kilometer equivalent gridded spacing recommended by some of the studies above). Luckily, those studies were looking at specific near coastal areas, where models are much more sensitive to small changes than in the interior, so you can think of the target as filling in a ring around the coastline, rather than filling in the entire continent. Still, you see we’re a long way from where we’d like to be.</p>
+<p>There’s a lot of white on this map (corresponding to 30 kilometer cells with less than 10 kilometer equivalent grid density) and very little black (corresponding to the roughly 1 kilometer equivalent gridded spacing recommended by some of the studies above). Luckily, those studies were looking at specific near coastal areas, where models are much more sensitive to small changes than in the interior, so <strong>you can think of the target as filling in a ring of dark purple to black around the coastline</strong>, rather than filling in the entire continent. We’re a long way from where we’d like to be.</p>
 <p>We can get a better sense by looking at the Amundsen Sea Embayement, a region containing the much-discussed Thwaites and Pine Island glaciers responsible for the fastest mass loss in Antarctica today.</p>
 <p>Drag the slider to see the raw flight lines view versus the equivalent gridded spacing heatmap.</p>
 <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css"> <style>#juxtapose-ase, #juxtapose-wilkes { max-width: 500px; margin: 0 auto; }</style>
@@ -498,6 +523,9 @@ Crotti, Ilaria, Aurélien Quiquet, Amaelle Landais, et al. 2022. <span>“Wilkes
 <div id="ref-drewry_measured_1982" class="csl-entry" role="listitem">
 Drewry, D. J., S. R. Jordan, and E. Jankowski. 1982. <span>“Measured Properties of the Antarctic Ice Sheet: Surface Configuration, Ice Thickness, Volume and Bedrock Characteristics.”</span> <em>Annals of Glaciology</em> 3: 83–91. <a href="https://doi.org/10.3189/S0260305500002573">https://doi.org/10.3189/S0260305500002573</a>.
 </div>
+<div id="ref-durand_impact_2011" class="csl-entry" role="listitem">
+Durand, G., O. Gagliardini, L. Favier, T. Zwinger, and E. le Meur. 2011. <span>“Impact of Bedrock Description on Modeling Ice Sheet Dynamics.”</span> <em>Geophysical Research Letters</em> 38 (20). <a href="https://doi.org/10.1029/2011GL048892">https://doi.org/10.1029/2011GL048892</a>.
+</div>
 <div id="ref-fremand_antarctic_2023" class="csl-entry" role="listitem">
 Frémand, Alice C., Peter Fretwell, Julien A. Bodart, et al. 2023. <span>“Antarctic Bedmap Data: Findable, Accessible, Interoperable, and Reusable (<span>FAIR</span>) Sharing of 60 Years of Ice Bed, Surface, and Thickness Data.”</span> <em>Earth System Science Data</em> 15 (7): 2695–710. <a href="https://doi.org/10.5194/essd-15-2695-2023">https://doi.org/10.5194/essd-15-2695-2023</a>.
 </div>
@@ -506,6 +534,9 @@ Holschuh, N., K. Christianson, J. Paden, R. B. Alley, and S. Anandakrishnan. 202
 </div>
 <div id="ref-morlighem_deep_2019" class="csl-entry" role="listitem">
 Morlighem, Mathieu, Eric Rignot, Tobias Binder, et al. 2019. <span>“Deep Glacial Troughs and Stabilizing Ridges Unveiled Beneath the Margins of the Antarctic Ice Sheet.”</span> <em>Nature Geoscience</em>, ahead of print, December 12. <a href="https://doi.org/10.1038/s41561-019-0510-8">https://doi.org/10.1038/s41561-019-0510-8</a>.
+</div>
+<div id="ref-pattyn_uncertain_2020" class="csl-entry" role="listitem">
+Pattyn, Frank, and Mathieu Morlighem. 2020. <span>“The Uncertain Future of the Antarctic Ice Sheet.”</span> <em>Science</em> 367 (6484): 1331–35. <a href="https://doi.org/10.1126/science.aaz5487">https://doi.org/10.1126/science.aaz5487</a>.
 </div>
 <div id="ref-pritchard_bedgap:_2014" class="csl-entry" role="listitem">
 Pritchard, Hamish D. 2014. <span>“Bedgap: Where Next for Antarctic Subglacial Mapping?”</span> <em>Antarctic Science</em>, no. 26: 16. <a href="https://doi.org/10.1017/S095410201400025X">https://doi.org/10.1017/S095410201400025X</a>.
