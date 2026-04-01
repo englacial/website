@@ -6,7 +6,11 @@ bibliography: references.bib
 image: images/survey_density_bedmap_local_antarctica.png
 ---
 
-Radar sounders (also called radio-echo sounders, ice-penetrating radar, radar depth sounders, ground-penetrating radar, and all sorts of other names) are one of our core tools for understanding Antarctica and Greenland. Both ice sheets cover enormous land masses. Unlike the rest of the world, we can't directly observe where the land actually is because it's covered by hundreds to thousands of meters of ice. Radar sounders allow us, among other things, to see through the ice and map what the topography looks like beneath the ice. If radar sounders are entirely new to you, [Laura Lindzey's blog post](https://lindzey.github.io/blog/2015/07/27/a-brief-introduction-to-ice-penetrating-radar/) is a nice introduction.
+Radar sounders are one of our core tools for understanding Antarctica and Greenland. Both ice sheets cover enormous land masses. Unlike the rest of the world, we can't directly observe where the land actually is because it's covered by hundreds to thousands of meters of ice. Radar sounders allow us, among other things, to see through the ice and map what the topography looks like beneath the ice. If radar sounders are entirely new to you, [Laura Lindzey's blog post](https://lindzey.github.io/blog/2015/07/27/a-brief-introduction-to-ice-penetrating-radar/) is a nice introduction.
+
+It's a common refrain that we need more data, but the maps we have don't tell that story well. This post will give a bit of an introduction to why radar sounder data is important, but the core point is to argue that we should use a different set of maps in thinking about where we need more data and why.
+
+(Side note: Radar sounders are also called radio-echo sounders, ice-penetrating radar, radar depth sounders, ground-penetrating radar, and all sorts of other names, depending on the context. I apologize on behalf of my field.)
 
 ### A bit of history
 
