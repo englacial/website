@@ -4,15 +4,9 @@ title: "Connected Data Products Hackdays"
 
 ![](/images/hackdays-speakers/hackdays2026.png){fig-alt="Astera + Berkeley Institute for Data Science" fig-align="center" height="10em"}
 
-```{=html}
-<div style="text-align: center; margin: 1.5rem 0 2rem;">
-  <p style="font-size: 1.1rem; margin: 0.75rem;">Applications are open for the 2026 Connected Data Products Hackdays!<br></p>
-  <a href="https://forms.englacial.org/hackdays2026" class="btn btn-info btn-lg" style="font-size: 1.25rem; padding: 0.75rem 2.5rem;" target="_blank">Apply Here</a>
-  <p style="font-size: 1.1rem; margin: 0.75rem;">Applications will reviewed on a rolling basis <strong>starting March 9th</strong>.</p>
-  <p>The last day to apply is <strong>March 20th</strong>. We will accept applications until 11:59 PM <a href="https://www.timeanddate.com/time/zones/aoe" target="_blank">anywhere on earth</a>.</p>
-  <p>Travel support is available for all non-local participants.</p>
-</div>
-```
+::: {.callout-important}
+Applications are now closed. We look forward to seeing invited participants soon!
+:::
 
 ### Overview
 
