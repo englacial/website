@@ -9,7 +9,7 @@
 <link>https://englacial.org/updates.html</link>
 <atom:link href="https://englacial.org/updates.xml" rel="self" type="application/rss+xml"/>
 <description>Open Science Infrastructure for Earth&#39;s Ice Sheets</description>
-<generator>quarto-1.9.36</generator>
+<generator>quarto-1.9.37</generator>
 <lastBuildDate>Tue, 31 Mar 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Mapping polar radar sounder data coverage</title>
