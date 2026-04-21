@@ -1,16 +1,14 @@
 ---
-title: "Connected Data Products Hackdays: Project Survey"
-author: "Thomas Teisberg"
+title: "Recapping the first Connected Data Products Hackdays"
+author: "Thomas Teisberg and Shane Grigsby"
 date: "2026-04-24"
 categories: [news]
-image: images/placeholder.png
+image: images/hackdays-participants.jpg
 ---
 
 ![Connected data products hackdays participants at the end of 3 days of exchanging ideas and prototyping new data products and processes](images/hackdays-participants.jpg)
 
-
-
-Earlier this week, [Englacial](https://englacial.org) and the [Berkeley Institute for Data Science](https://bids.berkeley.edu/) hosted a "hackdays" workshop to exchange ideas and prototype concepts for open, connected scientific data products in the cryosphere.
+Last week, [Englacial](https://englacial.org) and the [Berkeley Institute for Data Science](https://bids.berkeley.edu/) hosted a "hackdays" workshop to exchange ideas and prototype concepts for open, connected scientific data products in the cryosphere.
 
 ::: {.d-flex .align-items-center .gap-3 .p-3 .border .rounded style="background-color: #f8f9fa;"}
 ![](images/astera_logo.png){style="width: 120px; flex-shrink: 0;"}
@@ -24,13 +22,20 @@ We know how you produce and share open-source research software: put it on GitHu
 
 We invited 30 scientists and engineers to come together in Berkeley, CA to build connected scientific data products for the cryosphere and think about what parts of this template should be.
 
+We didn't solve everything, but a couple of key themes emerged:
+
+* **Virtualization as a pathway for working with legacy datasets**: Almost every data product and model requires working with legacy datasets, and this can be quite painful. When data formats are the main issue, [VirtualiZarr](https://github.com/zarr-developers/VirtualiZarr) and [Icechunk](https://icechunk.io/en/stable/) offer clean ways to create a "virtual" cloud-optimized file that references back to the original file without rewriting any data. There was a huge amount of interest in virtualizing a variety of datasets, from radar sounder data to sea surface temperature to bed topography, in order to make working with these datasets in downstream software easier. [Max Jones](https://github.com/maxrjones) helped a number of teams to start understanding what it would take to virtualize their datasets.
+* **Documentation and update tracking is important**: The status quo standard is usually to release a paper when the first version of a dataset is released. But what happens when you update that dataset? A number of teams worked on creating or updating runnable Jupyter Book documentation, using the new [MyST](https://mystmd.org/) backend in Jupyter Book 2.0. The DEMAGORGN team decided to [start a blog](https://www.gatorglaciology.com/blog) to track update to their dataset.
+
+Below is a brief recap of what a few of the teams worked on:
+
 ### DEMOGORGN
 
 ![One realization of the DEMAGOGRN geostatistical basal topography model of Antarctica](images/demagorgn_whole_realizations.png){height=400}
 
 *Team: Mickey MacKie, Michael Field, Kage He*
 
-DEMOGORGN (Digital Elevation Models of Geostatistical ORiGiN) is a 100-member ensemble of geostatistical realizations of Antarctic bed topography, designed to support ice-sheet model uncertainty quantification. Rather than release the entire data product once, the team is designing for iterative updates as new data becomes available. During the hackdays, the team converted DEMOGORGN to cloud-optimized format and published it on [Source Cooperative](https://source.coop/englacial/demogorgn). The data product will be available from an [Icechunk store](https://icechunk.io/en/stable/), with each update tagged to a commit that can be referenced for reproducibility. They also built scripts for downloading regional subsets and for stitching MCMC inversions into the broader ensemble. To facilitate rapid annoncements of updates, they'll be notifying about dataset changes on the [Gator Glaciology blog](https://www.gatorglaciology.com/demogorgn).
+DEMOGORGN (Digital Elevation Models of Geostatistical ORiGiN) is a 100-member ensemble of geostatistical realizations of Antarctic bed topography, designed to support ice-sheet model uncertainty quantification. Rather than release the entire data product once, the team is designing for iterative updates as new data becomes available. During the hackdays, the team converted DEMOGORGN to cloud-optimized format and published it on [Source Cooperative](https://source.coop/englacial/demogorgn). The data product will be available from an [Icechunk store](https://icechunk.io/en/stable/), with each update tagged to a commit that can be referenced for reproducibility. They also built scripts for downloading regional subsets and for stitching MCMC inversions into the broader ensemble. To facilitate rapid annoncements of updates, they'll be notifying about dataset changes on the [Gator Glaciology blog](https://www.gatorglaciology.com/blog).
 
 :::: {.d-flex .justify-content-start .gap-2 .flex-wrap}
 [{{< fa brands github >}} GitHub](https://github.com/GatorGlaciology/DEMOGORGN-Antarctica){.btn .btn-outline-primary .btn-sm}
@@ -70,6 +75,8 @@ The "xover" team looked at combining and comparing datasets from different instr
 ---
 
 ### earthaccess v1.0 API Design
+
+![`earthaccess` is a Python package for finding and accessing NASA's Earth science datasets. One team worked on API improvements to make it easier to link `earthaccess` into other tools.](images/earthaccess_logo.png){width=400}
 
 *Team: Matt Fisher, Trey Stafford, Joe Kennedy, Yueyi Che, Shane Grigsby, Julia Lober*
 
