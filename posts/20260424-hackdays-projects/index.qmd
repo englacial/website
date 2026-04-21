@@ -64,7 +64,7 @@ The "xover" team looked at combining and comparing datasets from different instr
 
 :::: {.d-flex .justify-content-start .gap-2 .flex-wrap}
 [{{< fa brands github >}} GitHub](https://github.com/shahinmg/xover){.btn .btn-outline-primary .btn-sm}
-[{{< fa chart-area >}} Interactive Notebook on Binder](https://github.com/shahinmg/xover){.btn .btn-outline-primary .btn-sm}
+[{{< fa chart-area >}} Interactive Notebook on Binder](https://mybinder.org/v2/gh/thomasteisberg/xover/HEAD?urlpath=%2Fdoc%2Ftree%2Fnotebooks%2Ftest.ipynb){.btn .btn-outline-primary .btn-sm}
 ::::
 
 ---
