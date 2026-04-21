@@ -18,7 +18,7 @@ The workshop was supported by [Astera's](https://astera.org/) open science progr
 
 The goal of this workshop was to prototype the patterns for creating connected scientific data products as software. Right now, even the best data products are often distributed as one-off NetCDF files with no clear path to reproduce, remix, update, or modify them. As the web of scientific data products and models grows, this can lead to long lag times between updates and complicated traceability.
 
-We know how you produce and share open-source research software: put it on GitHub, license it under a permissive license, create a contributor guide, accept pull requests and issues, etc. For scientific data products, there's no equivalent template to follow.
+We know how to produce and share open-source research software: put it on GitHub, license it under a permissive license, create a contributor guide, accept pull requests and issues, etc. For scientific data products, there's no equivalent template to follow.
 
 We invited 30 scientists and engineers to come together in Berkeley, CA to build connected scientific data products for the cryosphere and think about what parts of this template should be.
 
