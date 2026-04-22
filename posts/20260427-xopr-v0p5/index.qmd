@@ -1,0 +1,41 @@
+---
+title: "xOPR v0.5: Open Polar Radar data in the Python data ecosystem"
+author: "Thomas Teisberg, Shane Grigsby, John Paden, Reece Matthews"
+date: "2026-04-27"
+image: images/TODO.png
+---
+
+Polar radar sounder data is collected by more than a dozen different institutions, with more distinct instruments and platforms than most of us can count. That incredible international collaboration over the last 60 years has generated an enormous wealth of data. But actually using that data is hard. Different institutions release data in different formats and levels of processing. Or they may not release it at all.
+
+Open Polar Radar is a multi-institution collaboration whose goal is to solve this data access problem by providing unifed data processing tools, products, and access to the several millions line-km of existing radar sounder data. If you haven't seen it before, you should check out the [Open Polar Radar](https://openpolarradar.org/), which features a growing number of datasets from different providers.
+
+As those of you who are familar with OPR know, though, it's been a mostly Matlab-focused ecosystem. 
+For the last 6 months, we've been quietly working away on changing that through a lightweight Python library called `xOPR`.
+
+`xOPR` provides access to the entire catalog of processed Open Polar Radar data products, cleanly integrated into the Python data ecosystem. You don't need to worry about what type of `.mat` file the source data is in, you just query for the data and get back an `xarray.Dataset`.
+
+Let's take a look at how it works.
+
+<!--
+TODO: Code snippet and resulting plot of showing all Antarctic lines in xOPR, colored by the institution that provided them.
+-->
+
+Here are all of the Antarctic radar lines available in the `xOPR` catalog (so far). (Don't worry - we do Greenland too!) If you haven't check in on OPR in a while, you might be surprised to notice that there's quite a lot of ICECAP data contributed by the University of Texas Institute for Geophysics.
+
+If you want to pull data for your favorite glacier, we make that easy too. You can query the catalog on many criteria, including by passing a bounding box. Here's everything we've got on Totten:
+
+<!--
+TODO: Code snippet and resulting plot showing a bounding box around Totten and the matching flight lines within in.
+-->
+
+Obviously we want to do more than just look at maps. Each "frame" of data is assocaited with one or more data products. These represent standardized levels of processing, so you always know what you're getting. The universally-available options are `CSARP_qlook` (unfocused SAR) and `CSARP_standard` (focused SAR). When you load a data product, you get an `xarray.Dataset`:
+
+<!--
+TODO: Example loading a single frame of radar data
+-->
+
+And we can plot a radargram like this:
+
+<!--
+TODO: Plot the radargram
+-->
