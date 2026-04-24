@@ -74,11 +74,40 @@ The "xover" team looked at combining and comparing datasets from different instr
 
 ---
 
+
+![Static view of an interactive widget displaying the change in velocity for a
+portion of the antarctic grounding zone](images/grounding_zone.png)
+
+*Team: Yueyi Che, Shane Grigsby, Jessica Scheick*
+
+The "Penapple" team looked at the more general problem that "xover" was working
+on-- how can we find (and extract) coincident data, i.e., model-to-data or
+data-to-data. Doing this is a two-step process: find the files that intersect,
+and then find the data within those files that intersect. The team tackled two
+use cases for this, [identifying granule matches between ICESat-2 and xopr radar
+data](https://github.com/englacial/xopr/blob/main/docs/notebooks/xopr_atl06_crossovers.ipynb),
+and [extracting InSAR velocity from around a modeled grounding
+line](https://github.com/espg/mortie/blob/main/examples/morton_linestring_insar_gl.ipynb)
+which was used to derive a [grounding zone anomaly for all of
+Antarctica](https://github.com/espg/mortie/blob/main/examples/morton_grounding_zone_velocity_anomaly.ipynb).
+For the figure above, the team brought [a new 'line' data
+type](https://github.com/espg/mortie/pull/26) to the mortie geohashing
+and Discrete Global Grid library (previously only points and polygons were
+supported). One [open question](https://github.com/geojupyter/initiatives/issues/18) that 
+surfaced from this work was if we need a standardized 'spatial coverage' type
+analogous to the python DateTime object. 
+
+:::: {.d-flex .justify-content-start .gap-2 .flex-wrap}
+[{{< fa brands github >}} GitHub](https://github.com/espg/mortie){.btn .btn-outline-primary .btn-sm}
+::::
+
+---
+
 ### earthaccess v1.0 API Design
 
 ![`earthaccess` is a Python package for finding and accessing NASA's Earth science datasets. One team worked on API improvements to make it easier to link `earthaccess` into other tools.](images/earthaccess_logo.png){width=400}
 
-*Team: Matt Fisher, Trey Stafford, Joe Kennedy, Yueyi Che, Shane Grigsby, Julia Lober*
+*Team: Matt Fisher, Trey Stafford, Joe Kennedy*
 
 [earthaccess](https://earthaccess.readthedocs.io) is a Python library that makes it simple to search and download NASA Earthdata. With a v1.0 release on the horizon, this team spent the hackdays workshopping an object-oriented API design. The central proposal — introduced in [issue #1250](https://github.com/earthaccess-dev/earthaccess/issues/1250) and prototyped in [PR #1298](https://github.com/earthaccess-dev/earthaccess/pull/1298) — is a `Results` class returned by search and query methods. The class would expose methods like `results.to_gdf()` (returning a GeoDataFrame), `results.to_geoparquet()`, and `results.to_stac()`, making it easy to move data into Arrow-native and STAC-compliant workflows. The team also discussed a `Client` class that would let users scope authentication and system selection (production vs. UAT) explicitly, improving testability and removing hidden global state.
 
