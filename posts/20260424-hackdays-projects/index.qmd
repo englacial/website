@@ -102,7 +102,7 @@ line](https://github.com/espg/mortie/blob/main/examples/morton_linestring_insar_
 which was used to derive a [grounding zone anomaly for all of
 Antarctica](https://github.com/espg/mortie/blob/main/examples/morton_grounding_zone_velocity_anomaly.ipynb).
 For the figure above, the team brought [a new 'line' data
-type](https://github.com/espg/mortie/pull/26) to the mortie geohashing
+type](https://github.com/espg/mortie/pull/26) to the `mortie` geohashing
 and Discrete Global Grid library (previously only points and polygons were
 supported). One [open question](https://github.com/geojupyter/initiatives/issues/18) that 
 surfaced from this work was if we need a standardized 'spatial coverage' type
@@ -118,7 +118,7 @@ analogous to the python DateTime object.
 
 ![`earthaccess` is a Python package for finding and accessing NASA's Earth science datasets. One team worked on API improvements to make it easier to link `earthaccess` into other tools.](images/earthaccess_logo.png){width=400}
 
-*Team: Matt Fisher, Trey Stafford, Joe Kennedy*
+*Team: Matt Fisher, Trey Stafford, Joe Kennedy, Julia Lober*
 
 [earthaccess](https://earthaccess.readthedocs.io) is a Python library that makes it simple to search and download NASA Earthdata. With a v1.0 release on the horizon, this team spent the hackdays workshopping an object-oriented API design. The central proposal — introduced in [issue #1250](https://github.com/earthaccess-dev/earthaccess/issues/1250) and prototyped in [PR #1298](https://github.com/earthaccess-dev/earthaccess/pull/1298) — is a `Results` class returned by search and query methods. The class would expose methods like `results.to_gdf()` (returning a GeoDataFrame), `results.to_geoparquet()`, and `results.to_stac()`, making it easy to move data into Arrow-native and STAC-compliant workflows. The team also discussed a `Client` class that would let users scope authentication and system selection (production vs. UAT) explicitly, improving testability and removing hidden global state.
 
