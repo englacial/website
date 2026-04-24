@@ -26,6 +26,16 @@ We didn't solve everything, but a couple of key themes emerged:
 
 * **Virtualization as a pathway for working with legacy datasets**: Almost every data product and model requires working with legacy datasets, and this can be quite painful. When data formats are the main issue, [VirtualiZarr](https://github.com/zarr-developers/VirtualiZarr) and [Icechunk](https://icechunk.io/en/stable/) offer clean ways to create a "virtual" cloud-optimized file that references back to the original file without rewriting any data. There was a huge amount of interest in virtualizing a variety of datasets, from radar sounder data to sea surface temperature to bed topography, in order to make working with these datasets in downstream software easier. [Max Jones](https://github.com/maxrjones) helped a number of teams to start understanding what it would take to virtualize their datasets.
 * **Documentation and update tracking is important**: The status quo standard is usually to release a paper when the first version of a dataset is released. But what happens when you update that dataset? A number of teams worked on creating or updating runnable Jupyter Book documentation, using the new [MyST](https://mystmd.org/) backend in Jupyter Book 2.0. The DEMAGORGN team decided to [start a blog](https://www.gatorglaciology.com/blog) to track update to their dataset.
+* **Search and selection across datasets remains a pain point**: Three of
+our project teams worked on data access problems at the intersection of
+search. Both the 'xover' and 'penapple' teams worked on merging data across
+sensors or from models to observations; i.e., ICESat-2 and Open Polar Radar,
+and InSAR with modeled grounding lines. These access patterns are getting better
+with virtualization and other metadata technologies around access and search-- and
+highlights that updates to the community infrastructure such as
+[earthaccess](https://github.com/earthaccess-dev/earthaccess)
+and [geojupyter](https://github.com/geojupyter) can have outsized impact 
+across multiple user groups.
 
 Below is a brief recap of what a few of the teams worked on:
 
@@ -74,6 +84,7 @@ The "xover" team looked at combining and comparing datasets from different instr
 
 ---
 
+### Data selection and fusion using Discrete Global Grid Systems
 
 ![Static view of an interactive widget displaying the change in velocity for a
 portion of the antarctic grounding zone](images/grounding_zone.png)
