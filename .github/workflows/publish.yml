@@ -40,11 +40,22 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install Python dependencies
+        run: uv sync
+
       - name: Install ismip6-viewer extension
         run: quarto add englacial/ismip-viewer --no-prompt
 
       - name: Render Quarto Project
-        run: quarto render
+        run: QUARTO_PYTHON=.venv/bin/python quarto render
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
