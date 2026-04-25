@@ -1,0 +1,155 @@
+---
+title: "xOPR v0.5: Open Polar Radar data in the Python data ecosystem"
+author: "Thomas Teisberg, Shane Grigsby, John Paden, Reece Matthews"
+date: "2026-04-27"
+image: images/antarctic_lines.png
+jupyter: python3
+format:
+    html:
+        code-line-numbers: true
+---
+
+Polar radar sounder data is collected by more than a dozen different institutions, with more distinct instruments and platforms than most of us can count. That incredible international collaboration over the last 60 years has generated an enormous wealth of data. But actually using that data is hard. Different institutions release data in different formats and levels of processing. Or they may not release it at all.
+
+Open Polar Radar is a multi-institution collaboration whose goal is to solve this data access problem by providing unified data processing tools, products, and access to the several millions line-km of existing radar sounder data. If you haven't seen it before, you should check out [Open Polar Radar](https://openpolarradar.org/), which features a growing number of datasets from different providers.
+
+As those of you who are familiar with OPR know, though, it's been a mostly Matlab-focused ecosystem.
+For the last 6 months, we've been quietly working away on changing that through a lightweight Python library called `xOPR`.
+
+`xOPR` provides access to the entire catalog of processed Open Polar Radar data products, cleanly integrated into the Python data ecosystem. You don't need to worry about what type of `.mat` file the source data is in, you just query for the data and get back an `xarray.Dataset`.
+
+Let's take a look at how it works.
+
+```{python}
+#| echo: false
+#| output: false
+import warnings
+warnings.filterwarnings('ignore')
+
+import numpy as np
+import matplotlib.pyplot as plt
+import geopandas as gpd
+import holoviews as hv
+import hvplot.pandas
+
+hvplot.extension('matplotlib')
+```
+
+## What's in the catalog?
+
+You can install `xOPR` with `uv add xopr` or `pip install xopr`. Once installed, connecting to the catalog is a single line:
+
+```{python}
+import xopr
+
+opr = xopr.OPRConnection()
+```
+
+When you create an `OPRConnection`, xOPR syncs a local copy of the STAC catalog — the index of all available data. After the first sync, subsequent startups check an ETag and only download changes, so it's fast.
+
+Here are all of the Antarctic radar lines available in the `xOPR` catalog (so far). (Don't worry — we do Greenland too!) If you haven't checked in on OPR in a while, you might be surprised by how much ICECAP data from the University of Texas Institute for Geophysics is now included.
+
+```{python}
+#| label: fig-antarctic-lines
+#| fig-cap: "All Antarctic radar sounder lines in the xOPR catalog, colored by institution. CReSIS (University of Kansas) lines are shown in blue; UTIG (University of Texas) lines in orange."
+#| warning: false
+#| message: false
+
+import cartopy.crs as ccrs
+
+antarctica = xopr.geometry.get_antarctic_regions(simplify_tolerance=10000)
+antarctic_frames = opr.query_frames(geometry=antarctica)
+
+antarctic_frames = antarctic_frames.assign(
+    provider=antarctic_frames['properties'].str['opr:provider']
+    )
+
+antarctic_frames.hvplot(by='provider', features=['coastline', 'ocean'],
+                        projection='EPSG:3031', height=600, linewidth=0.5)
+```
+
+## Querying by region
+
+If you want to pull data for your favorite glacier, we make that easy too. You can query the catalog by many criteria, including by passing a geometry. `xOPR` also ships with a helper to load named regions from the [MEaSUREs Antarctic Boundaries](https://nsidc.org/data/nsidc-0709) dataset, so you can just ask for a region by name.
+
+Here's everything in the catalog over Totten Glacier:
+
+```{python}
+#| label: fig-totten-lines
+#| fig-cap: "Radar flight lines over the Totten region (black outline) available in the xOPR catalog."
+
+# Load higher resolution background map features
+import geoviews as gv
+import cartopy.feature as cfeature
+coast = gv.feature.Feature(cfeature.COASTLINE.with_scale('10m'))
+ocean = gv.feature.Feature(cfeature.OCEAN.with_scale('10m'))
+
+totten = xopr.geometry.get_antarctic_regions(name='Totten', merge_regions=True, simplify_tolerance=1000)
+totten_frames = opr.query_frames(geometry=totten)
+
+region_outline = gv.Polygons([totten]).opts(facecolor='none', edgecolor='black', linewidth=2)
+
+flight_lines = totten_frames.hvplot(by='collection', projection='EPSG:3031', height=600)
+
+coast * ocean * region_outline * flight_lines
+```
+
+## Loading radar data
+
+Obviously we want to do more than just look at maps. When you call `load_frame()`, you get back an `xarray.Dataset`:
+
+```{python}
+frame = opr.load_frame(totten_frames.iloc[103])
+frame.xopr
+```
+
+The `Data` variable is the raw radar echogram — a 2D array with `slow_time` (along-track) and `twtt` (two-way travel time, the vertical axis) as dimensions. `xOPR` is a lightweight data access tool, so we're not reinventing the wheel here. The format is the same as any OPR output product, as documented in the OPR [Echogram File Guide](https://gitlab.com/openpolarradar/opr/-/wikis/Echogram-File-Guide).
+
+`xOPR` handles both the modern HDF5 `.mat` format and legacy MATLAB v5 files transparently, so you don't need to think about what format the source file is in.
+
+## Plotting a radargram
+
+```{python}
+#| label: fig-radargram
+#| fig-cap: "Radar echogram over Totten Glacier. Surface and bed layer picks (dashed lines) are loaded directly from the OPR layer database."
+
+# Resample to uniform slow_time spacing (required for imshow)
+stacked = frame.resample(slow_time='2s').mean()
+data_dB = 10 * np.log10(np.abs(stacked['Data']))
+
+# Load layer picks (surface + bed)
+layers = opr.get_layers(stacked)
+
+fig, ax = plt.subplots(figsize=(8, 3.5))
+data_dB.plot.imshow(x='slow_time', cmap='gray', ax=ax,
+                            vmin=np.nanpercentile(data_dB.values, 5),
+                            vmax=np.nanpercentile(data_dB.values, 99),
+                            )
+ax.invert_yaxis()
+
+layer_style = {'linewidth': 1.2, 'linestyle': '--'}
+layer_labels = {'standard:surface': 'Surface', 'standard:bottom': 'Bed'}
+layer_colors = {'standard:surface': '#4fc3f7', 'standard:bottom': '#ef9a9a'}
+
+if layers:
+    for layer_name, layer_ds in layers.items():
+        label = layer_labels.get(layer_name, layer_name)
+        color = layer_colors.get(layer_name, 'white')
+        layer_ds['twtt'].plot(ax=ax, x='slow_time', label=label,
+                              color=color, **layer_style)
+    ax.legend(loc='upper right', fontsize=9, framealpha=0.6)
+
+ax.set_title(f"{stacked.attrs['collection']} — {stacked.attrs['segment_path']}")
+ax.set_xlabel('Time (UTC)')
+ax.set_ylabel('Two-way travel time (s)')
+plt.tight_layout()
+fig
+```
+
+## Doing more with `xOPR`
+
+We want `xOPR` to be your go-to tool for anything involving radar sounder data. It's designed to help you find data that matches your needs, prototype new processing or analysis methods, and then scale those across every byte of data that's available.
+
+To get started quickly, check out the notebooks in our [full documentation](https://docs.englacial.org/xopr/). These include tutorials on narrowing down on the data you need, scaling your analysis to cloud workers, extracting surface and bed information, doing crossover analysis, and more.
+
+`xOPR` is an open-source tool and we welcome your input. If you run into problems or have questions, feel free to [open an issue](https://github.com/englacial/xopr/issues). If you want to help us make `xOPR` better, we'd love to see your pull request too!
