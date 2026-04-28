@@ -10,7 +10,120 @@
 <atom:link href="https://englacial.org/updates.xml" rel="self" type="application/rss+xml"/>
 <description>Open Science Infrastructure for Earth&#39;s Ice Sheets</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Tue, 31 Mar 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 28 Apr 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Recapping the first Connected Data Products Hackdays</title>
+  <dc:creator>Thomas Teisberg and Shane Grigsby</dc:creator>
+  <link>https://englacial.org/posts/20240428-hackdays-projects/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://englacial.org/posts/20240428-hackdays-projects/images/hackdays-participants.jpg" class="img-fluid figure-img"></p>
+<figcaption>Connected data products hackdays participants at the end of 3 days of exchanging ideas and prototyping new data products and processes</figcaption>
+</figure>
+</div>
+<p>Last week, <a href="https://englacial.org">Englacial</a> and the <a href="https://bids.berkeley.edu/">Berkeley Institute for Data Science</a> hosted a “hackdays” workshop to exchange ideas and prototype concepts for open, connected scientific data products in the cryosphere.</p>
+<div class="d-flex align-items-center gap-3 p-3 border rounded" style="background-color: #f8f9fa;">
+<p><img src="https://englacial.org/posts/20240428-hackdays-projects/images/astera_logo.png" class="img-fluid" style="width: 120px; flex-shrink: 0;"></p>
+<p>The workshop was supported by <a href="https://astera.org/">Astera’s</a> open science program. A huge thank you to Prachee, Becky, and Seemay for making this happen!</p>
+</div>
+<p>The goal of this workshop was to prototype the patterns for creating connected scientific data products as software. Right now, most scientific data products are distributed as one-off NetCDF files with no clear path to reproduce, remix, update, or modify them. As the web of scientific data products and models grows, this can lead to long lag times between updates and complicated traceability.</p>
+<p>We know how to produce and share open-source research software: put it on GitHub, license it under a permissive license, create a contributor guide, accept pull requests and issues, etc. For scientific data products, there’s no equivalent template to follow.</p>
+<p>We invited 30 scientists and engineers to come together in Berkeley, CA to build connected scientific data products for the cryosphere and think about what parts of this template should be.</p>
+<p>We didn’t solve everything, but a few themes emerged:</p>
+<ul>
+<li><strong>Virtualization as a pathway for working with legacy datasets</strong>: Almost every data product and model requires working with legacy datasets, and this can be quite painful. When data formats are the main issue, <a href="https://github.com/zarr-developers/VirtualiZarr">VirtualiZarr</a> and <a href="https://icechunk.io/en/stable/">Icechunk</a> offer clean ways to create a “virtual” cloud-optimized file that references back to the original file without rewriting any data. There was a huge amount of interest in virtualizing a variety of datasets, from radar sounder data to sea surface temperature to bed topography, in order to make working with these datasets in downstream software easier. <a href="https://github.com/maxrjones">Max Jones</a> helped a number of teams to start understanding what it would take to virtualize their datasets.</li>
+<li><strong>Documentation and update tracking is important</strong>: The status quo standard is usually to release a paper when the first version of a dataset is released. But what happens when you update that dataset? A number of teams worked on creating or updating runnable Jupyter Book documentation, using the new <a href="https://mystmd.org/">MyST</a> backend in Jupyter Book 2.0. The DEMAGORGN team decided to <a href="https://www.gatorglaciology.com/blog">start a blog</a> to track update to their dataset.</li>
+<li><strong>Search and selection across datasets remains a pain point</strong>: Three of our project teams worked on data access problems at the intersection of search. Both the “xover” and “penapple” teams worked on merging data across sensors or from models to observations; i.e., ICESat-2 and Open Polar Radar, and InSAR with modeled grounding lines. These access patterns are getting better with virtualization and other metadata technologies around access and search – and highlights that updates to the community infrastructure such as <a href="https://github.com/earthaccess-dev/earthaccess">earthaccess</a> and <a href="https://github.com/geojupyter">geojupyter</a> can have outsized impact across multiple user groups.</li>
+</ul>
+<p>Below is a brief recap of what a few of the teams worked on:</p>
+<section id="demogorgn" class="level3">
+<h3 class="anchored" data-anchor-id="demogorgn">DEMOGORGN</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://englacial.org/posts/20240428-hackdays-projects/images/demagorgn_whole_realizations.png" height="400" class="figure-img"></p>
+<figcaption>One realization of the DEMAGOGRN geostatistical basal topography model of Antarctica</figcaption>
+</figure>
+</div>
+<p><em>Team: Mickey MacKie, Michael Field, Kage He</em></p>
+<p>DEMOGORGN (Digital Elevation Models of Geostatistical ORiGiN) is a 100-member ensemble of geostatistical realizations of Antarctic bed topography, designed to support ice-sheet model uncertainty quantification. Rather than release the entire data product once, the team is designing for iterative updates as new data becomes available. During the hackdays, the team converted DEMOGORGN to cloud-optimized format and published it on <a href="https://source.coop/englacial/demogorgn">Source Cooperative</a>. The data product will be available from an <a href="https://icechunk.io/en/stable/">Icechunk store</a>, with each update tagged to a commit that can be referenced for reproducibility. They also built scripts for downloading regional subsets and for stitching MCMC inversions into the broader ensemble. To facilitate rapid annoncements of updates, they’ll be notifying about dataset changes on the <a href="https://www.gatorglaciology.com/blog">Gator Glaciology blog</a>.</p>
+<div class="d-flex justify-content-start gap-2 flex-wrap">
+<p><a href="https://github.com/GatorGlaciology/DEMOGORGN-Antarctica" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a> <a href="https://source.coop/englacial/demogorgn" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-database" aria-label="database"></i> Data</a></p>
+</div>
+<hr>
+</section>
+<section id="gstatsim-new-applications-for-large-radar-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="gstatsim-new-applications-for-large-radar-datasets">GStatSim: New Applications for Large Radar Datasets</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://englacial.org/posts/20240428-hackdays-projects/images/gstatsim_reflectivity.png" height="400" class="figure-img"></p>
+<figcaption>Preparing radar bed reflectivity data for geostatistical interpolation with the GStatSim package</figcaption>
+</figure>
+</div>
+<p><em>Team: Eliza Dawson, Robyn Marowitz, Emmy Muniz, Lindsay Stark, Joey Rotondo</em></p>
+<p><a href="https://gatorglaciology.github.io/gstatsimbook/intro.html">GStatSim</a> is a Python package for geostatistical simulation of spatial data. During the hackdays, this team expanded its Jupyter Book documentation with two new real-world application notebooks. The first demonstrates a full end-to-end workflow for HiCARS radar sounder data: downloading granules from NSIDC via <code>earthaccess</code>, parsing and consolidating flight-line text files into a single GeoParquet, and fitting variogram models for kriging and geostatistical simulation. The second notebook explores filling the Arctic “pole hole” — the gap in satellite sea-ice coverage near the pole — using geostatistical interpolation of sea-ice albedo. Together these notebooks show real-world approaches to connecting datasets through an open-source package to produce a new data product.</p>
+<div class="d-flex justify-content-start gap-2 flex-wrap">
+<p><a href="https://github.com/elizadawson/gstatsimbook" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a> <a href="https://gatorglaciology.github.io/gstatsimbook/intro.html" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-book" aria-label="book"></i> Jupyter Book</a></p>
+</div>
+<hr>
+</section>
+<section id="xover-xopr-radar-sounder-icesat-2-crossover-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="xover-xopr-radar-sounder-icesat-2-crossover-analysis">xover: xOPR Radar Sounder + ICESat-2 Crossover Analysis</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://englacial.org/posts/20240428-hackdays-projects/images/xover_widget.png" class="img-fluid figure-img"></p>
+<figcaption>Static view of an interactive widget for exploring crossover points between a radar sounder dataset and the ICESat-2 flight paths</figcaption>
+</figure>
+</div>
+<p><em>Team: Michael Shahin, Donglai Yang, Hara Madhav Talasila, Jessica Scheick</em></p>
+<p>The “xover” team looked at combining and comparing datasets from different instruments. They built a workflow that finds crossover points between airborne radar sounder data (from <a href="https://github.com/englacial/xopr">xOPR</a>) and ICESat-2 laser altimetry tracks (using <a href="https://icepyx.readthedocs.io/en/latest/">icepyx</a>) over the Thwaites Glacier drainage basin. By intersecting the two datasets they produce “super-crossover” points: locations sampled by both sensors multiple times, enabling direct comparison of ice surface elevation and bed echo power. In addition to the pipeline for finding these crossover points, they built an interactive visualization widget that lets users explore crossover parameters — bed echo power, surface/bottom two-way travel time differentials, and more. The full pipeline outputs are stored as GeoParquet files for efficient downstream analysis.</p>
+<div class="d-flex justify-content-start gap-2 flex-wrap">
+<p><a href="https://github.com/shahinmg/xover" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a> <a href="https://mybinder.org/v2/gh/thomasteisberg/xover/HEAD?urlpath=%2Fdoc%2Ftree%2Fnotebooks%2Ftest.ipynb" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-chart-area" aria-label="chart-area"></i> Interactive Notebook on Binder</a></p>
+</div>
+<hr>
+</section>
+<section id="data-selection-and-fusion-using-discrete-global-grid-systems" class="level3">
+<h3 class="anchored" data-anchor-id="data-selection-and-fusion-using-discrete-global-grid-systems">Data selection and fusion using Discrete Global Grid Systems</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://englacial.org/posts/20240428-hackdays-projects/images/grounding_zone.png" height="400" class="figure-img"></p>
+<figcaption>Static view of an interactive widget displaying the change in velocity for a portion of the antarctic grounding zone</figcaption>
+</figure>
+</div>
+<p><em>Team: Yueyi Che, Shane Grigsby, Jessica Scheick</em></p>
+<p>The “Penapple” team looked at the more general problem that “xover” was working on– how can we find (and extract) coincident data, i.e., model-to-data or data-to-data. Doing this is a two-step process: find the files that intersect, and then find the data within those files that intersect. The team tackled two use cases for this, <a href="https://github.com/englacial/xopr/blob/main/docs/notebooks/xopr_atl06_crossovers.ipynb">identifying granule matches between ICESat-2 and xopr radar data</a>, and <a href="https://github.com/espg/mortie/blob/main/examples/morton_linestring_insar_gl.ipynb">extracting InSAR velocity from around a modeled grounding line</a> which was used to derive a <a href="https://github.com/espg/mortie/blob/main/examples/morton_grounding_zone_velocity_anomaly.ipynb">grounding zone anomaly for all of Antarctica</a>. For the figure above, the team brought <a href="https://github.com/espg/mortie/pull/26">a new ‘line’ data type</a> to the <code>mortie</code> geohashing and Discrete Global Grid library (previously only points and polygons were supported). One <a href="https://github.com/geojupyter/initiatives/issues/18">open question</a> that surfaced from this work was if we need a standardized ‘spatial coverage’ type analogous to the python DateTime object.</p>
+<div class="d-flex justify-content-start gap-2 flex-wrap">
+<p><a href="https://github.com/espg/mortie" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
+</div>
+<hr>
+</section>
+<section id="earthaccess-v1.0-api-design" class="level3">
+<h3 class="anchored" data-anchor-id="earthaccess-v1.0-api-design">earthaccess v1.0 API Design</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://englacial.org/posts/20240428-hackdays-projects/images/earthaccess_logo.png" class="img-fluid figure-img" width="400"></p>
+<figcaption><code>earthaccess</code> is a Python package for finding and accessing NASA’s Earth science datasets. One team worked on API improvements to make it easier to link <code>earthaccess</code> into other tools.</figcaption>
+</figure>
+</div>
+<p><em>Team: Matt Fisher, Trey Stafford, Joe Kennedy, Julia Lober</em></p>
+<p><a href="https://earthaccess.readthedocs.io">earthaccess</a> is a Python library that makes it simple to search and download NASA Earthdata. With a v1.0 release on the horizon, this team spent the hackdays workshopping an object-oriented API design. The central proposal — introduced in <a href="https://github.com/earthaccess-dev/earthaccess/issues/1250">issue #1250</a> and prototyped in <a href="https://github.com/earthaccess-dev/earthaccess/pull/1298">PR #1298</a> — is a <code>Results</code> class returned by search and query methods. The class would expose methods like <code>results.to_gdf()</code> (returning a GeoDataFrame), <code>results.to_geoparquet()</code>, and <code>results.to_stac()</code>, making it easy to move data into Arrow-native and STAC-compliant workflows. The team also discussed a <code>Client</code> class that would let users scope authentication and system selection (production vs.&nbsp;UAT) explicitly, improving testability and removing hidden global state.</p>
+<div class="d-flex justify-content-start gap-2 flex-wrap">
+<p><a href="https://github.com/earthaccess-dev/earthaccess" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a> <a href="https://earthaccess.readthedocs.io" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-book" aria-label="book"></i> Docs</a></p>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://englacial.org/posts/20240428-hackdays-projects/</guid>
+  <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://englacial.org/posts/20240428-hackdays-projects/images/hackdays-participants.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Mapping polar radar sounder data coverage</title>
   <dc:creator>Thomas Teisberg</dc:creator>

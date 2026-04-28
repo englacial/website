@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Thomas Teisberg and Shane Grigsby">
+<meta name="dcterms.date" content="2026-04-28">
 
-<title>News and updates –  englacial</title>
+<title>Recapping the first Connected Data Products Hackdays –  englacial</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,28 +28,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo_snowflake.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f7919f14b89ae9a431cba0b331f0b52b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo_snowflake.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f7919f14b89ae9a431cba0b331f0b52b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,35 +75,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async="" src="https://plausible.io/js/pa-AegmHWgLHcdedZvtA_uM7.js"></script>
 <script>
@@ -111,38 +82,9 @@ ul.task-list li input[type="checkbox"] {
   plausible.init()
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="<img src='/images/logo_snowflake.png' style='max-height: 1.5em;' /> englacial" href="updates.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
 <body class="nav-fixed quarto-light">
 
@@ -151,8 +93,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title"><img src="./images/logo_snowflake.png" style="max-height: 1.5em;"> englacial</span>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title"><img src="../../images/logo_snowflake.png" style="max-height: 1.5em;"> englacial</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -162,7 +104,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -171,11 +113,11 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-models">    
         <li>
-    <a class="dropdown-item" href="./static/models/">
+    <a class="dropdown-item" href="../../static/models/">
  <span class="dropdown-text">Viewer</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./models.html">
+    <a class="dropdown-item" href="../../models.html">
  <span class="dropdown-text">Examples</span></a>
   </li>  
     </ul>
@@ -190,17 +132,17 @@ window.Quarto = {
  <span class="dropdown-text">xOPR&nbsp;&nbsp;<i class="fa-solid fa-arrow-up-right-from-square" aria-label="arrow-up-right-from-square"></i></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./pages/2025-living-data-products.html">
+    <a class="dropdown-item" href="../../pages/2025-living-data-products.html">
  <span class="dropdown-text">Living Data Products</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./pages/2026-hackdays.html">
+    <a class="dropdown-item" href="../../pages/2026-hackdays.html">
  <span class="dropdown-text">Connected Data Products Hackdays</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./updates.html" aria-current="page"> 
+    <a class="nav-link" href="../../updates.html"> 
 <span class="menu-text">updates</span></a>
   </li>  
   <li class="nav-item compact">
@@ -216,25 +158,50 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#demogorgn" id="toc-demogorgn" class="nav-link active" data-scroll-target="#demogorgn">DEMOGORGN</a></li>
+  <li><a href="#gstatsim-new-applications-for-large-radar-datasets" id="toc-gstatsim-new-applications-for-large-radar-datasets" class="nav-link" data-scroll-target="#gstatsim-new-applications-for-large-radar-datasets">GStatSim: New Applications for Large Radar Datasets</a></li>
+  <li><a href="#xover-xopr-radar-sounder-icesat-2-crossover-analysis" id="toc-xover-xopr-radar-sounder-icesat-2-crossover-analysis" class="nav-link" data-scroll-target="#xover-xopr-radar-sounder-icesat-2-crossover-analysis">xover: xOPR Radar Sounder + ICESat-2 Crossover Analysis</a></li>
+  <li><a href="#data-selection-and-fusion-using-discrete-global-grid-systems" id="toc-data-selection-and-fusion-using-discrete-global-grid-systems" class="nav-link" data-scroll-target="#data-selection-and-fusion-using-discrete-global-grid-systems">Data selection and fusion using Discrete Global Grid Systems</a></li>
+  <li><a href="#earthaccess-v1.0-api-design" id="toc-earthaccess-v1.0-api-design" class="nav-link" data-scroll-target="#earthaccess-v1.0-api-design">earthaccess v1.0 API Design</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">News and updates</h1>
-</div>
+<h1 class="title">Recapping the first Connected Data Products Hackdays</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">news</div>
+  </div>
+  </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Thomas Teisberg and Shane Grigsby </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 28, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -244,100 +211,105 @@ window.Quarto = {
 </header>
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hackdays-participants.jpg" class="img-fluid figure-img"></p>
+<figcaption>Connected data products hackdays participants at the end of 3 days of exchanging ideas and prototyping new data products and processes</figcaption>
+</figure>
+</div>
+<p>Last week, <a href="https://englacial.org">Englacial</a> and the <a href="https://bids.berkeley.edu/">Berkeley Institute for Data Science</a> hosted a “hackdays” workshop to exchange ideas and prototype concepts for open, connected scientific data products in the cryosphere.</p>
+<div class="d-flex align-items-center gap-3 p-3 border rounded" style="background-color: #f8f9fa;">
+<p><img src="images/astera_logo.png" class="img-fluid" style="width: 120px; flex-shrink: 0;"></p>
+<p>The workshop was supported by <a href="https://astera.org/">Astera’s</a> open science program. A huge thank you to Prachee, Becky, and Seemay for making this happen!</p>
+</div>
+<p>The goal of this workshop was to prototype the patterns for creating connected scientific data products as software. Right now, most scientific data products are distributed as one-off NetCDF files with no clear path to reproduce, remix, update, or modify them. As the web of scientific data products and models grows, this can lead to long lag times between updates and complicated traceability.</p>
+<p>We know how to produce and share open-source research software: put it on GitHub, license it under a permissive license, create a contributor guide, accept pull requests and issues, etc. For scientific data products, there’s no equivalent template to follow.</p>
+<p>We invited 30 scientists and engineers to come together in Berkeley, CA to build connected scientific data products for the cryosphere and think about what parts of this template should be.</p>
+<p>We didn’t solve everything, but a few themes emerged:</p>
+<ul>
+<li><strong>Virtualization as a pathway for working with legacy datasets</strong>: Almost every data product and model requires working with legacy datasets, and this can be quite painful. When data formats are the main issue, <a href="https://github.com/zarr-developers/VirtualiZarr">VirtualiZarr</a> and <a href="https://icechunk.io/en/stable/">Icechunk</a> offer clean ways to create a “virtual” cloud-optimized file that references back to the original file without rewriting any data. There was a huge amount of interest in virtualizing a variety of datasets, from radar sounder data to sea surface temperature to bed topography, in order to make working with these datasets in downstream software easier. <a href="https://github.com/maxrjones">Max Jones</a> helped a number of teams to start understanding what it would take to virtualize their datasets.</li>
+<li><strong>Documentation and update tracking is important</strong>: The status quo standard is usually to release a paper when the first version of a dataset is released. But what happens when you update that dataset? A number of teams worked on creating or updating runnable Jupyter Book documentation, using the new <a href="https://mystmd.org/">MyST</a> backend in Jupyter Book 2.0. The DEMAGORGN team decided to <a href="https://www.gatorglaciology.com/blog">start a blog</a> to track update to their dataset.</li>
+<li><strong>Search and selection across datasets remains a pain point</strong>: Three of our project teams worked on data access problems at the intersection of search. Both the “xover” and “penapple” teams worked on merging data across sensors or from models to observations; i.e., ICESat-2 and Open Polar Radar, and InSAR with modeled grounding lines. These access patterns are getting better with virtualization and other metadata technologies around access and search – and highlights that updates to the community infrastructure such as <a href="https://github.com/earthaccess-dev/earthaccess">earthaccess</a> and <a href="https://github.com/geojupyter">geojupyter</a> can have outsized impact across multiple user groups.</li>
+</ul>
+<p>Below is a brief recap of what a few of the teams worked on:</p>
+<section id="demogorgn" class="level3">
+<h3 class="anchored" data-anchor-id="demogorgn">DEMOGORGN</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/demagorgn_whole_realizations.png" height="400" class="figure-img"></p>
+<figcaption>One realization of the DEMAGOGRN geostatistical basal topography model of Antarctica</figcaption>
+</figure>
+</div>
+<p><em>Team: Mickey MacKie, Michael Field, Kage He</em></p>
+<p>DEMOGORGN (Digital Elevation Models of Geostatistical ORiGiN) is a 100-member ensemble of geostatistical realizations of Antarctic bed topography, designed to support ice-sheet model uncertainty quantification. Rather than release the entire data product once, the team is designing for iterative updates as new data becomes available. During the hackdays, the team converted DEMOGORGN to cloud-optimized format and published it on <a href="https://source.coop/englacial/demogorgn">Source Cooperative</a>. The data product will be available from an <a href="https://icechunk.io/en/stable/">Icechunk store</a>, with each update tagged to a commit that can be referenced for reproducibility. They also built scripts for downloading regional subsets and for stitching MCMC inversions into the broader ensemble. To facilitate rapid annoncements of updates, they’ll be notifying about dataset changes on the <a href="https://www.gatorglaciology.com/blog">Gator Glaciology blog</a>.</p>
+<div class="d-flex justify-content-start gap-2 flex-wrap">
+<p><a href="https://github.com/GatorGlaciology/DEMOGORGN-Antarctica" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a> <a href="https://source.coop/englacial/demogorgn" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-database" aria-label="database"></i> Data</a></p>
+</div>
+<hr>
+</section>
+<section id="gstatsim-new-applications-for-large-radar-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="gstatsim-new-applications-for-large-radar-datasets">GStatSim: New Applications for Large Radar Datasets</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/gstatsim_reflectivity.png" height="400" class="figure-img"></p>
+<figcaption>Preparing radar bed reflectivity data for geostatistical interpolation with the GStatSim package</figcaption>
+</figure>
+</div>
+<p><em>Team: Eliza Dawson, Robyn Marowitz, Emmy Muniz, Lindsay Stark, Joey Rotondo</em></p>
+<p><a href="https://gatorglaciology.github.io/gstatsimbook/intro.html">GStatSim</a> is a Python package for geostatistical simulation of spatial data. During the hackdays, this team expanded its Jupyter Book documentation with two new real-world application notebooks. The first demonstrates a full end-to-end workflow for HiCARS radar sounder data: downloading granules from NSIDC via <code>earthaccess</code>, parsing and consolidating flight-line text files into a single GeoParquet, and fitting variogram models for kriging and geostatistical simulation. The second notebook explores filling the Arctic “pole hole” — the gap in satellite sea-ice coverage near the pole — using geostatistical interpolation of sea-ice albedo. Together these notebooks show real-world approaches to connecting datasets through an open-source package to produce a new data product.</p>
+<div class="d-flex justify-content-start gap-2 flex-wrap">
+<p><a href="https://github.com/elizadawson/gstatsimbook" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a> <a href="https://gatorglaciology.github.io/gstatsimbook/intro.html" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-book" aria-label="book"></i> Jupyter Book</a></p>
+</div>
+<hr>
+</section>
+<section id="xover-xopr-radar-sounder-icesat-2-crossover-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="xover-xopr-radar-sounder-icesat-2-crossover-analysis">xover: xOPR Radar Sounder + ICESat-2 Crossover Analysis</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/xover_widget.png" class="img-fluid figure-img"></p>
+<figcaption>Static view of an interactive widget for exploring crossover points between a radar sounder dataset and the ICESat-2 flight paths</figcaption>
+</figure>
+</div>
+<p><em>Team: Michael Shahin, Donglai Yang, Hara Madhav Talasila, Jessica Scheick</em></p>
+<p>The “xover” team looked at combining and comparing datasets from different instruments. They built a workflow that finds crossover points between airborne radar sounder data (from <a href="https://github.com/englacial/xopr">xOPR</a>) and ICESat-2 laser altimetry tracks (using <a href="https://icepyx.readthedocs.io/en/latest/">icepyx</a>) over the Thwaites Glacier drainage basin. By intersecting the two datasets they produce “super-crossover” points: locations sampled by both sensors multiple times, enabling direct comparison of ice surface elevation and bed echo power. In addition to the pipeline for finding these crossover points, they built an interactive visualization widget that lets users explore crossover parameters — bed echo power, surface/bottom two-way travel time differentials, and more. The full pipeline outputs are stored as GeoParquet files for efficient downstream analysis.</p>
+<div class="d-flex justify-content-start gap-2 flex-wrap">
+<p><a href="https://github.com/shahinmg/xover" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a> <a href="https://mybinder.org/v2/gh/thomasteisberg/xover/HEAD?urlpath=%2Fdoc%2Ftree%2Fnotebooks%2Ftest.ipynb" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-chart-area" aria-label="chart-area"></i> Interactive Notebook on Binder</a></p>
+</div>
+<hr>
+</section>
+<section id="data-selection-and-fusion-using-discrete-global-grid-systems" class="level3">
+<h3 class="anchored" data-anchor-id="data-selection-and-fusion-using-discrete-global-grid-systems">Data selection and fusion using Discrete Global Grid Systems</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/grounding_zone.png" height="400" class="figure-img"></p>
+<figcaption>Static view of an interactive widget displaying the change in velocity for a portion of the antarctic grounding zone</figcaption>
+</figure>
+</div>
+<p><em>Team: Yueyi Che, Shane Grigsby, Jessica Scheick</em></p>
+<p>The “Penapple” team looked at the more general problem that “xover” was working on– how can we find (and extract) coincident data, i.e., model-to-data or data-to-data. Doing this is a two-step process: find the files that intersect, and then find the data within those files that intersect. The team tackled two use cases for this, <a href="https://github.com/englacial/xopr/blob/main/docs/notebooks/xopr_atl06_crossovers.ipynb">identifying granule matches between ICESat-2 and xopr radar data</a>, and <a href="https://github.com/espg/mortie/blob/main/examples/morton_linestring_insar_gl.ipynb">extracting InSAR velocity from around a modeled grounding line</a> which was used to derive a <a href="https://github.com/espg/mortie/blob/main/examples/morton_grounding_zone_velocity_anomaly.ipynb">grounding zone anomaly for all of Antarctica</a>. For the figure above, the team brought <a href="https://github.com/espg/mortie/pull/26">a new ‘line’ data type</a> to the <code>mortie</code> geohashing and Discrete Global Grid library (previously only points and polygons were supported). One <a href="https://github.com/geojupyter/initiatives/issues/18">open question</a> that surfaced from this work was if we need a standardized ‘spatial coverage’ type analogous to the python DateTime object.</p>
+<div class="d-flex justify-content-start gap-2 flex-wrap">
+<p><a href="https://github.com/espg/mortie" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
+</div>
+<hr>
+</section>
+<section id="earthaccess-v1.0-api-design" class="level3">
+<h3 class="anchored" data-anchor-id="earthaccess-v1.0-api-design">earthaccess v1.0 API Design</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/earthaccess_logo.png" class="img-fluid figure-img" width="400"></p>
+<figcaption><code>earthaccess</code> is a Python package for finding and accessing NASA’s Earth science datasets. One team worked on API improvements to make it easier to link <code>earthaccess</code> into other tools.</figcaption>
+</figure>
+</div>
+<p><em>Team: Matt Fisher, Trey Stafford, Joe Kennedy, Julia Lober</em></p>
+<p><a href="https://earthaccess.readthedocs.io">earthaccess</a> is a Python library that makes it simple to search and download NASA Earthdata. With a v1.0 release on the horizon, this team spent the hackdays workshopping an object-oriented API design. The central proposal — introduced in <a href="https://github.com/earthaccess-dev/earthaccess/issues/1250">issue #1250</a> and prototyped in <a href="https://github.com/earthaccess-dev/earthaccess/pull/1298">PR #1298</a> — is a <code>Results</code> class returned by search and query methods. The class would expose methods like <code>results.to_gdf()</code> (returning a GeoDataFrame), <code>results.to_geoparquet()</code>, and <code>results.to_stac()</code>, making it easy to move data into Arrow-native and STAC-compliant workflows. The team also discussed a <code>Client</code> class that would let users scope authentication and system selection (production vs.&nbsp;UAT) explicitly, improving testability and removing hidden global state.</p>
+<div class="d-flex justify-content-start gap-2 flex-wrap">
+<p><a href="https://github.com/earthaccess-dev/earthaccess" class="btn btn-outline-primary btn-sm"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a> <a href="https://earthaccess.readthedocs.io" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-book" aria-label="book"></i> Docs</a></p>
+</div>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmV3cw==" data-listing-date-sort="1777334400000" data-listing-file-modified-sort="1777411233160" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1297">
-<div class="thumbnail"><a href="./posts/20240428-hackdays-projects/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/20240428-hackdays-projects/images/hackdays-participants.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/20240428-hackdays-projects/index.html" class="no-external">Recapping the first Connected Data Products Hackdays</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/20240428-hackdays-projects/index.html" class="no-external">
-Last week, Englacial and the Berkeley Institute for Data Science hosted a “hackdays” workshop to exchange ideas and prototype concepts for open, connected scientific data…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/20240428-hackdays-projects/index.html" class="no-external">
-<div class="listing-date">
-Apr 28, 2026
-</div>
-<div class="listing-author">
-Thomas Teisberg and Shane Grigsby
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1774915200000" data-listing-file-modified-sort="1777411233209" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2234">
-<div class="thumbnail"><a href="./posts/20260331-radar-sounder-density/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/20260331-radar-sounder-density/images/survey_density_bedmap_local_antarctica.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/20260331-radar-sounder-density/index.html" class="no-external">Mapping polar radar sounder data coverage</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/20260331-radar-sounder-density/index.html" class="no-external">
-Radar sounders are one of our core tools for understanding Antarctica and Greenland. Both ice sheets cover enormous land masses. Unlike the rest of the world, we can’t…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/20260331-radar-sounder-density/index.html" class="no-external">
-<div class="listing-date">
-Mar 31, 2026
-</div>
-<div class="listing-author">
-Thomas Teisberg
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bmV3cw==" data-listing-date-sort="1765843200000" data-listing-file-modified-sort="1777411233163" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1044">
-<div class="thumbnail"><a href="./posts/20251216-living-data-products/ldp.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/20251216-living-data-products/pinn.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/20251216-living-data-products/ldp.html" class="no-external">Announcing our Living Data Products awardees</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/20251216-living-data-products/ldp.html" class="no-external">
-Most observational data goes through many layers of processing and analysis to transform into a model-ready data product. The process of producing these derived data…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/20251216-living-data-products/ldp.html" class="no-external">
-<div class="listing-date">
-Dec 16, 2025
-</div>
-<div class="listing-author">
-Thomas Teisberg and Shane Grigsby
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
