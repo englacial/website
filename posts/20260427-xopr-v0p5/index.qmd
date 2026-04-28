@@ -1,7 +1,7 @@
 ---
 title: "xOPR v0.5: Open Polar Radar data in the Python data ecosystem"
 author: "Thomas Teisberg, Shane Grigsby, John Paden, Reece Matthews"
-date: "2026-04-27"
+date: "2026-04-29"
 image: images/antarctic_lines.png
 jupyter: python3
 format:
@@ -9,7 +9,7 @@ format:
         code-line-numbers: true
 ---
 
-Polar radar sounder data is collected by more than a dozen different institutions, with more distinct instruments and platforms than most of us can count. That incredible international collaboration over the last 60 years has generated an enormous wealth of data. But actually using that data is hard. Different institutions release data in different formats and levels of processing. Or they may not release it at all.
+Polar radar sounder data is collected by more than a dozen different institutions, with more distinct instruments and platforms than most of us can count. This international collaboration over the last 60 years has generated an enormous wealth of data. But actually using that data is hard. Different institutions release data in different formats and levels of processing. Or they may not release it at all.
 
 Open Polar Radar is a multi-institution collaboration whose goal is to solve this data access problem by providing unified data processing tools, products, and access to the several millions line-km of existing radar sounder data. If you haven't seen it before, you should check out [Open Polar Radar](https://openpolarradar.org/), which features a growing number of datasets from different providers.
 
@@ -45,9 +45,9 @@ import xopr
 opr = xopr.OPRConnection()
 ```
 
-When you create an `OPRConnection`, xOPR syncs a local copy of the STAC catalog — the index of all available data. After the first sync, subsequent startups check an ETag and only download changes, so it's fast.
+When you create an `OPRConnection`, xOPR syncs a local copy of the STAC catalog — the index of all available data. After the first sync, subsequent startups check only download changes, so it's fast.
 
-Here are all of the Antarctic radar lines available in the `xOPR` catalog (so far). (Don't worry — we do Greenland too!) If you haven't checked in on OPR in a while, you might be surprised by how much ICECAP data from the University of Texas Institute for Geophysics is now included.
+Here's how you find all of the Antarctic radar lines available in the `xOPR` catalog (so far). (Don't worry — we do Greenland too!) If you haven't checked in on OPR in a while, you might be surprised by how much ICECAP data from the University of Texas Institute for Geophysics is now included.
 
 ```{python}
 #| label: fig-antarctic-lines
@@ -70,7 +70,7 @@ antarctic_frames.hvplot(by='provider', features=['coastline', 'ocean'],
 
 ## Querying by region
 
-If you want to pull data for your favorite glacier, we make that easy too. You can query the catalog by many criteria, including by passing a geometry. `xOPR` also ships with a helper to load named regions from the [MEaSUREs Antarctic Boundaries](https://nsidc.org/data/nsidc-0709) dataset, so you can just ask for a region by name.
+If you want to pull data for your favorite glacier, we make that easy too. You can query the catalog by many criteria, including by passing a polygon outlining your area of interest. `xOPR` also ships with a helper to load named regions from the [MEaSUREs Antarctic Boundaries](https://nsidc.org/data/nsidc-0709) dataset, so you can ask for a region by name.
 
 Here's everything in the catalog over Totten Glacier:
 
@@ -107,42 +107,43 @@ The `Data` variable is the raw radar echogram — a 2D array with `slow_time` (a
 
 `xOPR` handles both the modern HDF5 `.mat` format and legacy MATLAB v5 files transparently, so you don't need to think about what format the source file is in.
 
+If you expand the "Attributes" tab above, you'll see that the processing parameters are encoded under `param_array`, `param_records`, and `param_sar`.
+
 ## Plotting a radargram
+
+Frames (or combinations of frames created by passing multiple frames to `xopr.merge_frames()`) can be plotted as radargrams. Here we resample by stacking to get a consistent 2 second spacing and transform the data to log scale before plotting.
 
 ```{python}
 #| label: fig-radargram
-#| fig-cap: "Radar echogram over Totten Glacier. Surface and bed layer picks (dashed lines) are loaded directly from the OPR layer database."
+#| fig-cap: "An example radargram over Totten Glacier."
 
-# Resample to uniform slow_time spacing (required for imshow)
+# Resample to uniform slow_time spacing
 stacked = frame.resample(slow_time='2s').mean()
 data_dB = 10 * np.log10(np.abs(stacked['Data']))
 
-# Load layer picks (surface + bed)
-layers = opr.get_layers(stacked)
-
+# Plot the radargram
 fig, ax = plt.subplots(figsize=(8, 3.5))
-data_dB.plot.imshow(x='slow_time', cmap='gray', ax=ax,
-                            vmin=np.nanpercentile(data_dB.values, 5),
-                            vmax=np.nanpercentile(data_dB.values, 99),
-                            )
+data_dB.plot.imshow(x='slow_time', cmap='gray', ax=ax)
+ax.set_title(f"{stacked.attrs['collection']} — {stacked.attrs['segment_path']}")
 ax.invert_yaxis()
+fig
+```
 
-layer_style = {'linewidth': 1.2, 'linestyle': '--'}
-layer_labels = {'standard:surface': 'Surface', 'standard:bottom': 'Bed'}
-layer_colors = {'standard:surface': '#4fc3f7', 'standard:bottom': '#ef9a9a'}
+The OPR dataset also includes surface and bed picks for most data. Layers (including the surface and bed) are loaded by calling `opr.get_layers()` with any radar dataset as the argument:
+
+```{python}
+#| label: fig-radargram-layers
+#| fig-cap: "The same radargram as above with added surface and bed layer picks loaded from OPR."
+
+# Load and plot available layer picks
+layers = opr.get_layers(stacked)
 
 if layers:
     for layer_name, layer_ds in layers.items():
-        label = layer_labels.get(layer_name, layer_name)
-        color = layer_colors.get(layer_name, 'white')
-        layer_ds['twtt'].plot(ax=ax, x='slow_time', label=label,
-                              color=color, **layer_style)
+        layer_ds['twtt'].plot(ax=ax, x='slow_time',
+                              label=layer_name, linestyle=':')
     ax.legend(loc='upper right', fontsize=9, framealpha=0.6)
 
-ax.set_title(f"{stacked.attrs['collection']} — {stacked.attrs['segment_path']}")
-ax.set_xlabel('Time (UTC)')
-ax.set_ylabel('Two-way travel time (s)')
-plt.tight_layout()
 fig
 ```
 
