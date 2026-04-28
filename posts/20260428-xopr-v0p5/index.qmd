@@ -1,8 +1,8 @@
 ---
-title: "xOPR v0.5: Open Polar Radar data in the Python data ecosystem"
+title: "xOPR: Open Polar Radar data in Python"
 author: "Thomas Teisberg, Shane Grigsby, John Paden, Reece Matthews"
 date: "2026-04-29"
-image: images/antarctic_lines.png
+image: images/xopr-totten.png
 jupyter: python3
 format:
     html:
@@ -15,6 +15,11 @@ Open Polar Radar is a multi-institution collaboration whose goal is to solve thi
 
 As those of you who are familiar with OPR know, though, it's been a mostly Matlab-focused ecosystem.
 For the last 6 months, we've been quietly working away on changing that through a lightweight Python library called `xOPR`.
+
+::: {.callout-tip}
+## Give us feedback on our roadmap
+We've reached a `v0.5` release and we're looking for feedback on what works for you, what doesn't, and what you'd like to see next. If you haven't played with `xOPR` before, check it out. Then do us a huge favor and [rank your preferences for the future roadmap in our survey here](https://forms.englacial.org/xopr-roadmap).
+:::
 
 `xOPR` provides access to the entire catalog of processed Open Polar Radar data products, cleanly integrated into the Python data ecosystem. You don't need to worry about what type of `.mat` file the source data is in, you just query for the data and get back an `xarray.Dataset`.
 
@@ -154,3 +159,5 @@ We want `xOPR` to be your go-to tool for anything involving radar sounder data. 
 To get started quickly, check out the notebooks in our [full documentation](https://docs.englacial.org/xopr/). These include tutorials on narrowing down on the data you need, scaling your analysis to cloud workers, extracting surface and bed information, doing crossover analysis, and more.
 
 `xOPR` is an open-source tool and we welcome your input. If you run into problems or have questions, feel free to [open an issue](https://github.com/englacial/xopr/issues). If you want to help us make `xOPR` better, we'd love to see your pull request too!
+
+Most importantly, tell us what you want to see next by [ranking your preferences for the future roadmap in our survey here](https://forms.englacial.org/xopr-roadmap).
