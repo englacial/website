@@ -11,7 +11,7 @@ format:
 
 Polar radar sounder data is collected by more than a dozen different institutions, with more distinct instruments and platforms than most of us can count. This international collaboration over the last 60 years has generated an enormous wealth of data. But actually using that data is hard. Different institutions release data in different formats and levels of processing. Or they may not release it at all.
 
-Open Polar Radar is a multi-institution collaboration whose goal is to solve this data access problem by providing unified data processing tools, products, and access to the several millions line-km of existing radar sounder data. If you haven't seen it before, you should check out [Open Polar Radar](https://openpolarradar.org/), which features a growing number of datasets from different providers.
+Open Polar Radar is a multi-institution collaboration whose goal is to solve this data access problem by providing unified data processing tools, products, and access to the several millions of line-km of existing radar sounder data. If you haven't seen it before, you should check out [Open Polar Radar](https://openpolarradar.org/), which features a growing number of datasets from different providers.
 
 As those of you who are familiar with OPR know, though, it's been a mostly Matlab-focused ecosystem.
 For the last 6 months, we've been quietly working away on changing that through a lightweight Python library called `xOPR`.
